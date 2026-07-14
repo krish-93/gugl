@@ -3,19 +3,19 @@
     {
       "id": "main",
       "name": "S1-Telugu",
-      "url": "https://raw.githubusercontent.com/gopigk08/gk/main/omni.m3u",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/helloworld.m3u",
       "priority": 1
     },
     {
       "id": "backup",
       "name": "S2-JIO",
-      "url": "https://raw.githubusercontent.com/gopigk08/gk/refs/heads/main/omni-jio.m3u",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gio.m3u",
       "priority": 2
     },
     {
       "id": "only 4K",
       "name": "S3-Test ",
-      "url": "https://raw.githubusercontent.com/gopigk08/mylist/main/JIO-TATA.m3u",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/tpaad.m3u",
       "priority": 3
     }
   ],
