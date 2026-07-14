@@ -1,0 +1,335 @@
+#EXTM3U x-tvg-url="https://github.com/whythishome/epg/raw/refs/heads/master/guides/dishtv.in_en.xml.gz" 
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="AIRTEL_MINIPLEX" group-title="AIRTEL🧧Airtel Special" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AIRTEL_MINIPLEX/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Airtel Miniplex
+https://yowaimo.in/Artl/live.php?watchid=AIRTEL_MINIPLEX&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_TV_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TV_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee TV HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_TV_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_UTSAV" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_UTSAV/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Utsav
+https://yowaimo.in/Artl/live.php?watchid=STAR_UTSAV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_BHARAT_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_BHARAT_HD/images/LANDSCAPE_169_HD/image.png",Star Bharat HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_BHARAT_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_PLUS_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_PLUS_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Plus HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_PLUS_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_PLUS_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_PLUS_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Plus HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_PLUS_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SET_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET_HD/images/LANDSCAPE_169_HD/image.png",SET HD
+https://yowaimo.in/Artl/live.php?watchid=SET_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_SAB_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony SAB HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_SAB_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_PAL" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PAL/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony Pal
+https://yowaimo.in/Artl/live.php?watchid=SONY_PAL&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="COLORS_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Colors HD
+https://yowaimo.in/Artl/live.php?watchid=COLORS_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="40" group-title="AIRTEL🧧Entertainment" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-115-j5fl6g6w-v1/imageContent-115-j5fl6g6w-m1.jpg",&tv HD
+https://yowaimo.in/Artl/live.php?watchid=40&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="BIG_MAGIC" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BIG_MAGIC/images/LANDSCAPE_169_HD/image.png",Big Magic
+https://yowaimo.in/Artl/live.php?watchid=BIG_MAGIC&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="EPIC" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EPIC/images/LANDSCAPE_169_HD/image.png",Epic
+https://yowaimo.in/Artl/live.php?watchid=EPIC&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="523" group-title="AIRTEL🧧Entertainment" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11967-j9luigc0-v2/imageContent-11967-j9luigc0-m2.jpg",Zee Anmol
+https://yowaimo.in/Artl/live.php?watchid=523&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DISNEY_INTERNATIONAL_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Disney International HD
+https://yowaimo.in/Artl/live.php?watchid=DISNEY_INTERNATIONAL_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DANGAL" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DANGAL/images/LANDSCAPE_169_HD/image.png",Dangal
+https://yowaimo.in/Artl/live.php?watchid=DANGAL&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DANGAL_2" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DANGAL_2/images/LANDSCAPE_169_HD/image.png",Dangal 2
+https://yowaimo.in/Artl/live.php?watchid=DANGAL_2&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ISHARA_TV" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ISHARA_TV/images/LANDSCAPE_169_HD/image.png",Ishara TV
+https://yowaimo.in/Artl/live.php?watchid=ISHARA_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="54" group-title="AIRTEL🧧Entertainment" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-58022-khxpmalc-v1/imageContent-58022-khxpmalc-m4.png",The Q
+https://yowaimo.in/Artl/live.php?watchid=54&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_TV_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TV_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee TV HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_TV_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_MARATHI_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_MARATHI_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Marathi HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_MARATHI_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ETV_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_HD/images/LANDSCAPE_169_HD/image.png",ETV HD
+https://yowaimo.in/Artl/live.php?watchid=ETV_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="GEMINI_TV_HD" group-title="AIRTEL🧧Entertainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GEMINI_TV_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Gemini TV HD
+https://yowaimo.in/Artl/live.php?watchid=GEMINI_TV_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_BBC_EARTH_HD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_BBC_EARTH_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony BBC earth HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_BBC_EARTH_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DISCOVERY_HD_WORLD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISCOVERY_HD_WORLD/images/LANDSCAPE_169_HD/image.png",Discovery HD World
+https://yowaimo.in/Artl/live.php?watchid=DISCOVERY_HD_WORLD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="HISTORY_TV18_HD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HISTORY_TV18_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",History TV18 HD
+https://yowaimo.in/Artl/live.php?watchid=HISTORY_TV18_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="NAT_GEO_WILD_HD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD_HD/images/LANDSCAPE_169_HD/image.png",Nat Geo Wild HD
+https://yowaimo.in/Artl/live.php?watchid=NAT_GEO_WILD_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_ZEST_HD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_ZEST_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",ZEE ZEST HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_ZEST_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_BBC_EARTH_HD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_BBC_EARTH_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony BBC earth HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_BBC_EARTH_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ANIMAL_PLANET_HD" group-title="AIRTEL🧧Infotainment" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ANIMAL_PLANET_WORLD_HD/images/LOGO_HD/image.png",Animal Planet HD
+https://yowaimo.in/Artl/live.php?watchid=ANIMAL_PLANET_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_YAY" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony Yay
+https://yowaimo.in/Artl/live.php?watchid=SONY_YAY&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="POGO" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_POGO/images/LANDSCAPE_169_HD/image.png",Pogo
+https://yowaimo.in/Artl/live.php?watchid=POGO&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DISNEY_CHANNEL" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL/images/LANDSCAPE_169_HD/image.png",Disney Channel
+https://yowaimo.in/Artl/live.php?watchid=DISNEY_CHANNEL&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="NICK_HDSYMPLUS" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_HDSYMPLUS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",NICK HD+
+https://yowaimo.in/Artl/live.php?watchid=NICK_HDSYMPLUS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="CARTOON_NETWORK" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CARTOON_NETWORK/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Cartoon Network
+https://yowaimo.in/Artl/live.php?watchid=CARTOON_NETWORK&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DISCOVERY_KIDS" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISCOVERY_KIDS/images/LANDSCAPE_169_HD/image.png",Discovery Kids
+https://yowaimo.in/Artl/live.php?watchid=DISCOVERY_KIDS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DISCOVERY_KIDS" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISCOVERY_KIDS/images/LANDSCAPE_169_HD/image.png",Discovery Kids
+https://yowaimo.in/Artl/live.php?watchid=DISCOVERY_KIDS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DISNEY_JUNIOR" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_JUNIOR/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Disney Junior
+https://yowaimo.in/Artl/live.php?watchid=DISNEY_JUNIOR&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="HUNGAMA" group-title="AIRTEL🧧Kids" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LANDSCAPE_169_HD/image.png",HUNGAMA
+https://yowaimo.in/Artl/live.php?watchid=HUNGAMA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PERMAN_kid" group-title="AIRTEL🧧Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40BGblxkPEXTTm9ei2y2TLok6LsxuyO4_AQ&s",PERMAN HINDI
+https://yowaimo.in/Artl/live.php?watchid=PERMAN_kid&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="MASHA_AND_BEAR_kid" group-title="AIRTEL🧧Kids" tvg-logo="https://play-lh.googleusercontent.com/x-0xi5j42U7XuvyoPQBTSjGjA_a8yA_nkgqlgm0VjykuzySBBP9kczwh0YpCRU_x51o=w526-h296-rw",MASHA AND BEAR
+https://yowaimo.in/Artl/live.php?watchid=MASHA_AND_BEAR_kid&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="NINJA_HATTORI_kid" group-title="AIRTEL🧧Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKYvUxQgr_Mr_lGGrYbMWNG2Becq-_iCqnJg&s",NINJA HATTORI RETURNS HINDI
+https://yowaimo.in/Artl/live.php?watchid=NINJA_HATTORI_kid&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="NINJA_kid" group-title="AIRTEL🧧Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKYvUxQgr_Mr_lGGrYbMWNG2Becq-_iCqnJg&s",NINJA HATTORI HINDI
+https://yowaimo.in/Artl/live.php?watchid=NINJA_kid&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SHINCHAN_kid" group-title="AIRTEL🧧Kids" tvg-logo="https://www.partysuppliesindia.com/cdn/shop/products/A1_39_cdd62d5e-1c73-4b7d-a9a6-afa5cf22a7e5.jpg",SHINCHAN HINDI
+https://yowaimo.in/Artl/live.php?watchid=SHINCHAN_kid&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DORAEMON_kid" group-title="AIRTEL🧧Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReJSPyLeBXQstZ_EwDIxE_QmD-i3yLK-5FBg&s",DORAEMON HINDI
+https://yowaimo.in/Artl/live.php?watchid=DORAEMON_kid&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_CINEMA_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Cinema HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_CINEMA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="AND_PICTURES_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMAND_PICTURES_HD/images/LOGO_HD/LOGO_HD_image.png",& Pictures HD
+https://yowaimo.in/Artl/live.php?watchid=AND_PICTURES_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ACTION_CINEMA" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ACTION_CINEMA/images/LANDSCAPE_169_HD/image.png",Action Cinema
+https://yowaimo.in/Artl/live.php?watchid=ACTION_CINEMA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_CLASSIC" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Classic
+https://yowaimo.in/Artl/live.php?watchid=ZEE_CLASSIC&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_UTSAV_MOVIES" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_UTSAV_MOVIES/images/LANDSCAPE_169_HD/image.png",STAR UTSAV MOVIES
+https://yowaimo.in/Artl/live.php?watchid=STAR_UTSAV_MOVIES&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_GOLD_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_GOLD_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Gold HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_GOLD_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_GOLD_2_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_GOLD_2_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Gold 2 HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_GOLD_2_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_GOLD_SELECT_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_GOLD_SELECT_HD/images/LANDSCAPE_169_HD/image.png",Star Gold Select HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_GOLD_SELECT_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_MAX_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_MAX_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony MAX HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_MAX_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_PIX_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PIX_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony Pix HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_PIX_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_WAH" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_WAH/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony Wah
+https://yowaimo.in/Artl/live.php?watchid=SONY_WAH&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="7" group-title="AIRTEL🧧Movies" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-16-j5f9ui8g-v1/imageContent-16-j5f9ui8g-m1.jpg",B4U Movies
+https://yowaimo.in/Artl/live.php?watchid=7&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="COLORS_CINEPLEX_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Colors Cineplex HD
+https://yowaimo.in/Artl/live.php?watchid=COLORS_CINEPLEX_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_GOLD_THRILLS" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_GOLD_THRILLS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Gold Thrills
+https://yowaimo.in/Artl/live.php?watchid=STAR_GOLD_THRILLS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="64" group-title="AIRTEL🧧Movies" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11091-j95hdiq8-v1/imageContent-11091-j95hdiq8-m1.jpg",Zee Anmol Cinema
+https://yowaimo.in/Artl/live.php?watchid=64&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="MNX_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LANDSCAPE_169_HD/image.png",MNX HD
+https://yowaimo.in/Artl/live.php?watchid=MNX_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="562" group-title="AIRTEL🧧Movies" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12093-j9ooixfs-v1/imageContent-12093-j9ooixfs-m1.jpg",Movies Now HD
+https://yowaimo.in/Artl/live.php?watchid=562&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="7" group-title="AIRTEL🧧Movies" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-16-j5f9ui8g-v1/imageContent-16-j5f9ui8g-m1.jpg",B4U Movies
+https://yowaimo.in/Artl/live.php?watchid=7&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_BOLLYWOOD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BOLLYWOOD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Bollywood
+https://yowaimo.in/Artl/live.php?watchid=ZEE_BOLLYWOOD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="730" group-title="AIRTEL🧧Movies" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/B4UKad_BoxCover-v9/B4UKad_BoxCover.jpg",B4U Kadak
+https://yowaimo.in/Artl/live.php?watchid=730&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SYMANDFLIX_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",&flix HD
+https://yowaimo.in/Artl/live.php?watchid=SYMANDFLIX_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="1499" group-title="AIRTEL🧧Movies" tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/GoldminesMovies_BoxCover_8b2f4929-47ca-44a6-a491-9ecc80b73fb0.png",Goldmines Movies
+https://yowaimo.in/Artl/live.php?watchid=1499&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_GOLD_ROMANCE" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_GOLD_ROMANCE/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Gold Romance
+https://yowaimo.in/Artl/live.php?watchid=STAR_GOLD_ROMANCE&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SUN_MARATHI_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUN_MARATHI_HD/images/LANDSCAPE_169_HD/image.png",Sun Marathi HD
+https://yowaimo.in/Artl/live.php?watchid=SUN_MARATHI_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_TALKIES_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TALKIES_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Talkies HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_TALKIES_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="GEMINI_MOVIES_HD" group-title="AIRTEL🧧Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GEMINI_MOVIES_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Gemini Movies HD
+https://yowaimo.in/Artl/live.php?watchid=GEMINI_MOVIES_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZING" group-title="AIRTEL🧧Music" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZING/images/LANDSCAPE_169_HD/image.png",Zing
+https://yowaimo.in/Artl/live.php?watchid=ZING&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="UDAYA_MUSIC" group-title="AIRTEL🧧Music" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_UDAYA_MUSIC/images/LANDSCAPE_169_HD/image.png",Udaya Music
+https://yowaimo.in/Artl/live.php?watchid=UDAYA_MUSIC&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SANGEET_MARATHI" group-title="AIRTEL🧧Music" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SANGEET_MARATHI/images/LANDSCAPE_169_HD/image.png",Sangeet Marathi
+https://yowaimo.in/Artl/live.php?watchid=SANGEET_MARATHI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PTC_CHAKDE" group-title="AIRTEL🧧Music" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_CHAKDE/images/LANDSCAPE_169_HD/image.png",PTC Chakde
+https://yowaimo.in/Artl/live.php?watchid=PTC_CHAKDE&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="RAJ_MUSIX_TELUGU" group-title="AIRTEL🧧Music" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TELUGU/images/LANDSCAPE_169_HD/image.png",Raj Musix Telugu
+https://yowaimo.in/Artl/live.php?watchid=RAJ_MUSIX_TELUGU&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="GEMINI_MUSIC" group-title="AIRTEL🧧Music" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GEMINI_MUSIC/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Gemini Music
+https://yowaimo.in/Artl/live.php?watchid=GEMINI_MUSIC&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_BHARAT" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BHARAT/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Bharat
+https://yowaimo.in/Artl/live.php?watchid=ZEE_BHARAT&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_NEWS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee News
+https://yowaimo.in/Artl/live.php?watchid=ZEE_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_NEWS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee News
+https://yowaimo.in/Artl/live.php?watchid=ZEE_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_RAJASTHAN_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_RAJASTHAN_NEWS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Rajasthan News
+https://yowaimo.in/Artl/live.php?watchid=ZEE_RAJASTHAN_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="1380" group-title="AIRTEL🧧News" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/News21_BoxCover-v1/News21_BoxCover.png",News 21
+https://yowaimo.in/Artl/live.php?watchid=1380&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="RAJ_NEWS_KANNADA" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_NEWS_KANNADA/images/LANDSCAPE_169_HD/image.png",Raj News Kannada
+https://yowaimo.in/Artl/live.php?watchid=RAJ_NEWS_KANNADA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="TV9_KANNADA" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TV9_KANNADA/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",TV9 Kannada
+https://yowaimo.in/Artl/live.php?watchid=TV9_KANNADA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SUN_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUN_NEWS/images/LANDSCAPE_169_HD/image.png",Sun News
+https://yowaimo.in/Artl/live.php?watchid=SUN_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_24_TAAS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_24_TAAS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee 24 Taas
+https://yowaimo.in/Artl/live.php?watchid=ZEE_24_TAAS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ABP_MAJHA" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ABP_MAJHA/images/LANDSCAPE_169_HD/image.png",ABP Majha
+https://yowaimo.in/Artl/live.php?watchid=ABP_MAJHA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="NDTV_INDIA" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_INDIA/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",NDTV India
+https://yowaimo.in/Artl/live.php?watchid=NDTV_INDIA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="1060" group-title="AIRTEL🧧News" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/LIVPU_BoxCover-v1/LIVPU_BoxCover.jpg",Live Punjabi
+https://yowaimo.in/Artl/live.php?watchid=1060&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="LIVING_INDIA_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_LIVING_INDIA_NEWS/images/LANDSCAPE_169_HD/image.png",Living India News
+https://yowaimo.in/Artl/live.php?watchid=LIVING_INDIA_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="FM_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FM_NEWS/images/LANDSCAPE_169_HD/image.png",FM NEWS
+https://yowaimo.in/Artl/live.php?watchid=FM_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="NEWS18_PUNJAB_HARYANA" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS18_PUNJAB_HARYANA/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",News18 Punjab Haryana
+https://yowaimo.in/Artl/live.php?watchid=NEWS18_PUNJAB_HARYANA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PTC_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_NEWS/images/LANDSCAPE_169_HD/image.png",PTC News
+https://yowaimo.in/Artl/live.php?watchid=PTC_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="CVR_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CVR_NEWS/images/LANDSCAPE_169_HD/image.png",CVR NEWS1
+https://yowaimo.in/Artl/live.php?watchid=CVR_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="RAJ_NEWS_TELUGU" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_NEWS_TELUGU/images/LANDSCAPE_169_HD/image.png",Raj News Telugu
+https://yowaimo.in/Artl/live.php?watchid=RAJ_NEWS_TELUGU&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="V6_NEWS" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_V6_NEWS/images/LANDSCAPE_169_HD/image.png",V6 NEWS
+https://yowaimo.in/Artl/live.php?watchid=V6_NEWS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="VANITHA" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VANITHA/images/LANDSCAPE_169_HD/image.png",Vanitha
+https://yowaimo.in/Artl/live.php?watchid=VANITHA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SAKSHI_TV" group-title="AIRTEL🧧News" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAKSHI_TV/images/LANDSCAPE_169_HD/image.png",Sakshi TV
+https://yowaimo.in/Artl/live.php?watchid=SAKSHI_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="JALSHA_MOVIES" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JALSHA_MOVIES/images/LANDSCAPE_169_HD/image.png",Jalsha Movies
+https://yowaimo.in/Artl/live.php?watchid=JALSHA_MOVIES&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_JALSHA_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/HOTSTARLIVETV/LIVECHANNEL/66e879751838555841d57fcc/images/LANDSCAPE_169/LANDSCAPE_169_NYu82yUQc_STAR-JALSHA-HD.png",Star Jalsha HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_JALSHA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ALANKAR" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ALANKAR/images/LANDSCAPE_169_HD/image.png",Alankar
+https://yowaimo.in/Artl/live.php?watchid=ALANKAR&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="COLORS_KANNADA_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_KANNADA_HD/images/LANDSCAPE_169_HD/image.png",Colors Kannada HD
+https://yowaimo.in/Artl/live.php?watchid=COLORS_KANNADA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="COLORS_KANNADA_CINEMA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_KANNADA_CINEMA/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Colors Kannada Cinema
+https://yowaimo.in/Artl/live.php?watchid=COLORS_KANNADA_CINEMA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="COLORS_SUPER" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_SUPER/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Colors Super
+https://yowaimo.in/Artl/live.php?watchid=COLORS_SUPER&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="425" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11680-j9khxjoo-v1/imageContent-11680-j9khxjoo-m1.jpg",Raj Musix
+https://yowaimo.in/Artl/live.php?watchid=425&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SUVARNA_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SUVARNA_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Suvarna HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_SUVARNA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SUVARNA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SUVARNA/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",STAR SUVARNA
+https://yowaimo.in/Artl/live.php?watchid=STAR_SUVARNA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="UDAYA_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_UDAYA_HD/images/LANDSCAPE_169_HD/image.png",Udaya HD
+https://yowaimo.in/Artl/live.php?watchid=UDAYA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="UDAYA_COMEDY" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_UDAYA_COMEDY/images/LANDSCAPE_169_HD/image.png",Udaya Comedy
+https://yowaimo.in/Artl/live.php?watchid=UDAYA_COMEDY&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="UDAYA_MOVIES" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_UDAYA_MOVIES/images/LANDSCAPE_169_HD/image.png",UDAYA MOVIES
+https://yowaimo.in/Artl/live.php?watchid=UDAYA_MOVIES&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DD_CHANDANA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_CHANDANA/images/LANDSCAPE_169_HD/image.png",DD Chandana
+https://yowaimo.in/Artl/live.php?watchid=DD_CHANDANA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="342" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/RKANN_BoxCover-v2/RKANN_BoxCover.png",R Kannada
+https://yowaimo.in/Artl/live.php?watchid=342&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PUBLIC_TV" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PUBLIC_TV/images/LANDSCAPE_169_HD/image.png",Public TV
+https://yowaimo.in/Artl/live.php?watchid=PUBLIC_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_KANNADA_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_KANNADA_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Kannada HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_KANNADA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="COLORS_MARATHI_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_MARATHI_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Colors Marathi HD
+https://yowaimo.in/Artl/live.php?watchid=COLORS_MARATHI_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_MARATHI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_MARATHI/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Sony Marathi
+https://yowaimo.in/Artl/live.php?watchid=SONY_MARATHI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_8" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_8/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",SONY AATH
+https://yowaimo.in/Artl/live.php?watchid=SONY_8&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DD_SAHYADRI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_SAHYADRI/images/LANDSCAPE_169_HD/image.png",DD Sahyadri
+https://yowaimo.in/Artl/live.php?watchid=DD_SAHYADRI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="TV9_MARATHI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TV9_MARATHI/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",TV9 Marathi
+https://yowaimo.in/Artl/live.php?watchid=TV9_MARATHI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="192" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-799-j5m7jg34-v2/imageContent-799-j5m7jg34-m2.jpg",Fakt Marathi
+https://yowaimo.in/Artl/live.php?watchid=192&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="CHARDIKLA_TIME_TV" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CHARDIKLA_TIME_TV/images/LANDSCAPE_169_HD/image.png",Chardikla Time TV
+https://yowaimo.in/Artl/live.php?watchid=CHARDIKLA_TIME_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="CHARDIKLA_TIME_TV" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CHARDIKLA_TIME_TV/images/LANDSCAPE_169_HD/image.png",Chardikla Time TV
+https://yowaimo.in/Artl/live.php?watchid=CHARDIKLA_TIME_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DD_PUNJABI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_PUNJABI/images/LANDSCAPE_169_HD/image.png",DD Punjabi
+https://yowaimo.in/Artl/live.php?watchid=DD_PUNJABI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="791" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-48802-k4m7nz2w-v1/imageContent-48802-k4m7nz2w-m1.jpg",Fateh TV
+https://yowaimo.in/Artl/live.php?watchid=791&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="366" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/INWPUB_BoxCover-v2/INWPUB_BoxCover.png",India News Punjab
+https://yowaimo.in/Artl/live.php?watchid=366&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="MH_ONE_SHRADDHA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MH_ONE_SHRADDHA/images/LANDSCAPE_169_HD/image.png",MH One Shraddha
+https://yowaimo.in/Artl/live.php?watchid=MH_ONE_SHRADDHA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PITAARA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PITAARA/images/LANDSCAPE_169_HD/image.png",Pitaara
+https://yowaimo.in/Artl/live.php?watchid=PITAARA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PTC_PUNJABI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_PUNJABI/images/LANDSCAPE_169_HD/image.png",PTC Punjabi
+https://yowaimo.in/Artl/live.php?watchid=PTC_PUNJABI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PTC_PUNJABI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_PUNJABI/images/LANDSCAPE_169_HD/image.png",PTC Punjabi
+https://yowaimo.in/Artl/live.php?watchid=PTC_PUNJABI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="PTC_SIMRAN" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PTC_SIMRAN/images/LANDSCAPE_169_HD/image.png",PTC Simran
+https://yowaimo.in/Artl/live.php?watchid=PTC_SIMRAN&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="571" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-68738-kywk7u6g-v1/imageContent-68738-kywk7u6g-m1.png",Tata Play Punjab De Rang
+https://yowaimo.in/Artl/live.php?watchid=571&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_PUNJAB_HARYANA_HIMACHAL" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_PUNJAB_HARYANA_HIMACHAL/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Punjab Haryana Himachal
+https://yowaimo.in/Artl/live.php?watchid=ZEE_PUNJAB_HARYANA_HIMACHAL&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_PUNJABI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_PUNJABI/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Punjabi
+https://yowaimo.in/Artl/live.php?watchid=ZEE_PUNJABI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="BHAKTI_TV" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHAKTI_TV/images/LANDSCAPE_169_HD/image.png",Bhakti TV
+https://yowaimo.in/Artl/live.php?watchid=BHAKTI_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ETV_CINEMA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_CINEMA/images/LANDSCAPE_169_HD/image.png",ETV Cinema
+https://yowaimo.in/Artl/live.php?watchid=ETV_CINEMA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="GEMINI_COMEDY" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GEMINI_COMEDY/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Gemini Comedy
+https://yowaimo.in/Artl/live.php?watchid=GEMINI_COMEDY&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_MAA_MOVIES_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MAA_MOVIES_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Maa Movies HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_MAA_MOVIES_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_MAA_GOLD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MAA_GOLD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",STAR MAA GOLD
+https://yowaimo.in/Artl/live.php?watchid=STAR_MAA_GOLD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_MAA_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MAA_HD/images/LANDSCAPE_169_HD/image.png",Star MAA HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_MAA_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="497" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11910-j9l58n8w-v2/imageContent-11910-j9l58n8w-m5.jpg",VTV News
+https://yowaimo.in/Artl/live.php?watchid=497&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ETV_PLUS" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_PLUS/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",ETV PLUS
+https://yowaimo.in/Artl/live.php?watchid=ETV_PLUS&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_CINEMALU_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMALU_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Cinemalu HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_CINEMALU_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_TELUGU_HD" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TELUGU_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Zee Telugu HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_TELUGU_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="GEMINI_LIFE" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GEMINI_LIFE/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Gemini Life
+https://yowaimo.in/Artl/live.php?watchid=GEMINI_LIFE&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ETV_LIFE" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_LIFE/images/LANDSCAPE_169_HD/image.png",ETV Life
+https://yowaimo.in/Artl/live.php?watchid=ETV_LIFE&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="320" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11327-j9jot000-v2/imageContent-11327-j9jot000-m2.jpg",TV5 News
+https://yowaimo.in/Artl/live.php?watchid=320&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="266" group-title="AIRTEL🧧Regional" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-17565-jclrkakg-v1/imageContent-17565-jclrkakg-m1.jpg",10 TV
+https://yowaimo.in/Artl/live.php?watchid=266&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="DD_SAPTAGIRI" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_SAPTAGIRI/images/LANDSCAPE_169_HD/image.png",DD Saptagiri
+https://yowaimo.in/Artl/live.php?watchid=DD_SAPTAGIRI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="VISSA_TV" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VISSA_TV/images/LANDSCAPE_169_HD/image.png",Vissa TV
+https://yowaimo.in/Artl/live.php?watchid=VISSA_TV&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_MAA" group-title="AIRTEL🧧Regional" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MAA/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",Star Maa
+https://yowaimo.in/Artl/live.php?watchid=STAR_MAA&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_1_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD/images/LANDSCAPE_169_HD/image.png",Star Sports 1 HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_1_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_1_HD_HINDI" group-title="AIRTEL🧧Sports" tvg-logo="https://oriby-streaming-proxy.sultanarabi161.workers.dev/https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LANDSCAPE_169_HD/image.png",Star Sports 1 HD Hindi
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_1_HD_HINDI&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_2_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2_HD/images/LANDSCAPE_169_HD/image.png",Star Sports 2 HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_2_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_2_HINDI_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SPORTS18_SYMHYP_1_HD/images/LOGO_HD/image.png",Star Sports 2 Hindi HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_2_HINDI_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_3" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_3/images/LOGO_HD/image.png",Star Sports 3
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_3&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_SELECT_1_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_SELECT_1_HD/images/LANDSCAPE_169_HD/image.png",Star Sports Select 1 HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_SELECT_1_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="STAR_SPORTS_SELECT_2_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_SELECT_2_HD/images/LANDSCAPE_169_HD/image.png",Star Sports Select 2 HD
+https://yowaimo.in/Artl/live.php?watchid=STAR_SPORTS_SELECT_2_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_SPORTS_TEN_1_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",SONY SPORTS TEN 1 HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_SPORTS_TEN_1_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_SPORTS_TEN_2_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",SONY SPORTS TEN 2 HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_SPORTS_TEN_2_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="464" group-title="AIRTEL🧧Sports" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11785-j9kynnm0-v3/imageContent-11785-j9kynnm0-m3.jpg",SONY SPORTS TEN 3 HD
+https://yowaimo.in/Artl/live.php?watchid=464&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SONY_SPORTS_TEN_5_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5_HD/images/LANDSCAPE_169_HD/LANDSCAPE_169_HD_image.png",SONY SPORTS TEN 5 HD
+https://yowaimo.in/Artl/live.php?watchid=SONY_SPORTS_TEN_5_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="SPORTS18SYMHYP3" group-title="AIRTEL🧧Sports" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SPORTS18SYMHYP3/images/LANDSCAPE_169_HD/image.png",Star Sports 2 Tamil
+https://yowaimo.in/Artl/live.php?watchid=SPORTS18SYMHYP3&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="FUSS_BALL_TV_1" group-title="AIRTEL🧧Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/17/2026_FIFA_World_Cup_emblem.svg",FussBallTv 1 4K UHD
+https://yowaimo.in/Artl/live.php?watchid=FUSS_BALL_TV_1&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="FUSS_BALL_TV_2" group-title="AIRTEL🧧Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/17/2026_FIFA_World_Cup_emblem.svg",FussBallTv 2 4K UHD
+https://yowaimo.in/Artl/live.php?watchid=FUSS_BALL_TV_2&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="FOX" group-title="AIRTEL🧧Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/17/2026_FIFA_World_Cup_emblem.svg",Fox HD
+https://yowaimo.in/Artl/live.php?watchid=FOX&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="ZEE_CAFE_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://res.cloudinary.com/dlzxf85nw/image/upload/q_auto/f_auto/v1780558291/unite1hd_vc1diq.png",Unite8 Sports 1 Hindi HD
+https://yowaimo.in/Artl/live.php?watchid=ZEE_CAFE_HD&userid=SFDHJ3UZ
+#EXTINF:-1 group-logo="https://yowaimo.in/Logo/1Airtel.png" tvg-id="AND_FLIX_HD" group-title="AIRTEL🧧Sports" tvg-logo="https://res.cloudinary.com/dlzxf85nw/image/upload/q_auto/f_auto/v1780558291/unite2hd_wdpxkw.png",Unite8 Sports 2 HD
+https://yowaimo.in/Artl/live.php?watchid=AND_FLIX_HD&userid=SFDHJ3UZ
