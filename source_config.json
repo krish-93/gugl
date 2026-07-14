@@ -1,0 +1,23 @@
+{
+  "playlists": [
+    {
+      "id": "main",
+      "name": "S1-Telugu",
+      "url": "https://raw.githubusercontent.com/gopigk08/gk/main/omni.m3u",
+      "priority": 1
+    },
+    {
+      "id": "backup",
+      "name": "S2-JIO",
+      "url": "https://raw.githubusercontent.com/gopigk08/gk/refs/heads/main/omni-jio.m3u",
+      "priority": 2
+    },
+    {
+      "id": "only 4K",
+      "name": "S3-Test ",
+      "url": "https://raw.githubusercontent.com/gopigk08/mylist/main/JIO-TATA.m3u",
+      "priority": 3
+    }
+  ],
+  "epgUrl": "https://your-server.com/epg.xml.gz"
+}
