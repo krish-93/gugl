@@ -7,11 +7,11 @@ from datetime import datetime
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 FRESH_JIO_URL = "https://thanks-to-veer.saqlainhaider8198.workers.dev/jtv90.m3u[srisk]?ua=sktechtv"
-OUTPUT_FILE   = "omni-jio.m3u"
+OUTPUT_FILE   = "gio.m3u"
 RETRY_COUNT   = 3
 RETRY_DELAY   = 5
 
-# Fixed header with EPG sources
+# Fixed header
 OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
@@ -65,13 +65,12 @@ def main():
     jio_lines = process_playlist(jio_content)
     print(f"  ✅ Extracted {len(jio_lines)} lines of raw channel data.")
 
-    # Get current time for timestamping
+    # Get current time
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
         # Write EPG Header
         f.write(OUTPUT_HEADER + "\n")
-        # Add timestamp so GitHub actions knows file is updated
         f.write(f"# Last Auto-Updated: {current_time}\n\n")
 
         for line in jio_lines:
