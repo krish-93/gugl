@@ -1,0 +1,45 @@
+name: Omni M3U Generator
+
+on:
+  schedule:
+    # Runs at minute 7 and 37 of every hour
+    - cron: '7,37 * * * *'
+  workflow_dispatch:  # Manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10  # Fail fast if something hangs
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Omni Generator Script
+        run: python generate_omni.py
+
+      - name: Commit and push updated files
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          
+          # Ikkada helloworld.m3u peru marchanu
+          git add helloworld.m3u
+          
+          if git diff --cached --quiet; then
+            echo "No changes detected in helloworld.m3u — skipping commit."
+          else
+            git commit -m "chore: auto-refresh M3U at $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
