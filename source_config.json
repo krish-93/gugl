@@ -1,1 +1,23 @@
-i4PL9Fvps2hYMuaRwFXZoQBYwxRwa/hcnR/LTIeLWJF5L57I9XVSQ6kTVcDwZLgn2Z7c7ISZ+X0MUkvh1CPwHJjdnWhd3QjJcPW0I8aNdoE/g5dZXYGJfmBOxRPhEIE/U+X99tI6pn7iIVq2HnkcM3nmzYEVkH2BKk5c61eUhRgkQRy/PHv3HgcgeTgZXNVuOUCnN/Uv9duyDmMsSv+IIM82H1zDyuE4BUk690/Y5WVwiQB4RM3zb88U2vYrhhqTpO0TT7Tl35BDr4rjd5xiuupqEmH/+x6DqXlsDrmr16QHB4gueYlQBD4mYA1c8Zgt6l0PDdgNR4L2sz3C7u70pNzIloZkXTTeeYGKapjJ+5kzcLKpiqYjAdUGB6kFwhDx7sm9yuOrXvqZXyBe2U+6/DIqMcNV6aw+UlIcPjLpTy2JsyzrngM88bpMGWnbC3L7YXwD4SwvY05zf0ee0U4YdgkbHfb8eVHeEYj2UMD+OXobiKXJvx6dTdahUcJ+280TMmEoAvTsoKsIoucAPTXJG/vMEjtDD5SN1A/l79fM+qV4uJkcMJ8CwBjv/6F84HjU4iOOqEZh2CRYHdeCHllqeka1FpNGnNhD+nNa0kq+1L6F598IHN2lEVwCfgUBZosSBev2fz1eQLm5sYiYK0XNMMueHL8q4/VMjZw+q8u75tE5KQx+izhvLFsETovJqhncLIcF5S4ugCikiP55VHolx5IQ7Aem8l3ZeU9m/h6uaZJGX0Ff73Y2FRBuCsKUsfhRC7dA/BQdjTaOAn3suxdy9Ti7rdn/NC+rd2D2sruT1Uw=
+{
+  "playlists": [
+    {
+      "id": "main",
+      "name": "S1-nayawala",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/helloworld.m3u",
+      "priority": 1
+    },
+    {
+      "id": "backup",
+      "name": "S2-JIO",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gio.m3u",
+      "priority": 2
+    },
+    {
+      "id": "only 4K",
+      "name": "S3-Test ",
+      "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/are-TP-Sala.m3u",
+      "priority": 3
+    }
+  ],
+  "epgUrl": "https://your-server.com/epg.xml.gz"
+}
