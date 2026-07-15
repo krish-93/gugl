@@ -25,13 +25,13 @@
       "priority": 4
     },
     {
-      "id": "server4",
+      "id": "server5",
       "name": "S5-Movies V1",
       "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/movixonein.m3u",
       "priority": 4
     },
     {
-      "id": "server4",
+      "id": "server6",
       "name": "S6-Movies V2",
       "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/oraldmovix.m3u",
       "priority": 4
