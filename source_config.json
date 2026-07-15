@@ -2,21 +2,27 @@
   "playlists": [
     {
       "id": "main",
-      "name": "S1-nayawala",
-      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/helloworld.m3u",
+      "name": "S1-JIO TV",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gio.m3u",
       "priority": 1
     },
     {
       "id": "backup",
-      "name": "S2-JIO",
-      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gio.m3u",
+      "name": "S2-JIO TV+",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gioplus.m3u",
       "priority": 2
     },
     {
       "id": "only 4K",
-      "name": "S3-XC ",
-      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gioplus.m3u",
+      "name": "S3-STAR SHARE",
+      "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/livxc.m3u",
       "priority": 3
+    },
+    {
+      "id": "server4",
+      "name": "S4-Only-Telugu",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/helloworld.m3u",
+      "priority": 4
     }
   ],
   "epgUrl": "https://your-server.com/epg.xml.gz"
