@@ -4,6 +4,10 @@ import ssl
 import sys
 import time
 from datetime import datetime
+import base64
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 FRESH_JIO_URL = "https://thanks-to-veer.saqlainhaider8198.workers.dev/jtv90.m3u[srisk]?ua=sktechtv"
@@ -11,7 +15,10 @@ OUTPUT_FILE   = "gio.m3u"
 RETRY_COUNT   = 3
 RETRY_DELAY   = 5
 
-# Fixed header
+# AES Keys
+SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
+IV         = b"OmniTV_IV_16_Bys"
+
 OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
@@ -22,61 +29,39 @@ def make_ssl_ctx():
     return ctx
 
 def fetch_url(url, retries=RETRY_COUNT):
-    print(f"  Fetching: {url[:90]}...")
     ctx = make_ssl_ctx()
     req = urllib.request.Request(url, headers={"User-Agent": "sktechtv", "Accept": "*/*"})
     for attempt in range(1, retries + 1):
         try:
             with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
-                data = resp.read().decode("utf-8", errors="replace")
-                print(f"  ✅ OK — {len(data):,} bytes")
-                return data
-        except urllib.error.HTTPError as e:
-            print(f"  ⚠️  HTTP {e.code} on attempt {attempt}/{retries}")
-        except Exception as e:
-            print(f"  ⚠️  Error on attempt {attempt}/{retries}: {e}")
-        if attempt < retries:
+                return resp.read().decode("utf-8", errors="replace")
+        except:
             time.sleep(RETRY_DELAY)
-    print(f"  ❌ All attempts failed.")
     return ""
 
-def process_playlist(content):
-    lines = content.splitlines()
-    filtered_lines = []
-    for line in lines:
-        s = line.strip()
-        if not s:
-            continue
-        if s.upper().startswith("#EXTM3U"):
-            continue 
-        filtered_lines.append(s)
-    return filtered_lines
-
 def main():
-    print("=" * 65)
-    print("  OMNI JIO M3U Generator — Auto Update Mode")
-    print("=" * 65)
-
     jio_content = fetch_url(FRESH_JIO_URL)
     if not jio_content:
-        print("❌ Failed to fetch Jio TV. Aborting.")
         sys.exit(1)
         
-    jio_lines = process_playlist(jio_content)
-    print(f"  ✅ Extracted {len(jio_lines)} lines of raw channel data.")
-
-    # Get current time
+    jio_lines = [line.strip() for line in jio_content.splitlines() if line.strip() and not line.strip().upper().startswith("#EXTM3U")]
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
+    # Prepare plaintext
+    final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
+    for line in jio_lines:
+        final_text += line + "\n"
+
+    # 🔥 AES ENCRYPTION 🔥
+    padder = padding.PKCS7(128).padder()
+    padded_data = padder.update(final_text.encode('utf-8')) + padder.finalize()
+    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
+    encryptor = cipher.encryptor()
+    encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
+    base64_encrypted = base64.b64encode(encrypted_data).decode('utf-8')
+
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-        # Write EPG Header
-        f.write(OUTPUT_HEADER + "\n")
-        f.write(f"# Last Auto-Updated: {current_time}\n\n")
-
-        for line in jio_lines:
-            f.write(line + "\n")
-
-    print(f"  ✅ SUCCESS — {OUTPUT_FILE} is ready and timestamped!")
+        f.write(base64_encrypted)
 
 if __name__ == "__main__":
     main()
