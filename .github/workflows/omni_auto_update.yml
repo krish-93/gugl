@@ -2,9 +2,8 @@ name: Omni M3U Generator
 
 on:
   schedule:
-    # Runs at minute 7 and 37 of every hour
     - cron: '7,37 * * * *'
-  workflow_dispatch:  # Manual trigger from Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,7 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10  # Fail fast if something hangs
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -26,6 +25,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      # 🔥 ఇక్కడ Encryption లైబ్రరీ ని ఇన్స్టాల్ చేస్తున్నాం 🔥
+      - name: Install Dependencies
+        run: pip install cryptography
+
       - name: Run Omni Generator Script
         run: python generate_omni.py
 
@@ -33,10 +36,7 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          
-          # Ikkada helloworld.m3u peru marchanu
           git add helloworld.m3u
-          
           if git diff --cached --quiet; then
             echo "No changes detected in helloworld.m3u — skipping commit."
           else
