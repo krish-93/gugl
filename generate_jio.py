@@ -12,8 +12,8 @@ from cryptography.hazmat.primitives import padding
 # ─── CONFIG ────────────────────────────────────────────────────────────
 FRESH_JIO_URL = "https://thanks-to-veer.saqlainhaider8198.workers.dev/jtv90.m3u[srisk]?ua=sktechtv"
 OUTPUT_FILE   = "gio.m3u"
-RETRY_COUNT   = 3
-RETRY_DELAY   = 5
+RETRY_COUNT   = 5
+RETRY_DELAY   = 10
 
 # AES Keys
 SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
@@ -34,20 +34,44 @@ def fetch_url(url, retries=RETRY_COUNT):
     for attempt in range(1, retries + 1):
         try:
             with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
-                return resp.read().decode("utf-8", errors="replace")
-        except:
-            time.sleep(RETRY_DELAY)
+                data = resp.read().decode("utf-8", errors="replace")
+                if data.strip():
+                    print(f"✅ Fetched successfully on attempt {attempt}")
+                    return data
+        except Exception as e:
+            print(f"⚠️ Attempt {attempt}/{retries} failed: {e}")
+            if attempt < retries:
+                time.sleep(RETRY_DELAY)
     return ""
 
 def main():
-    jio_content = fetch_url(FRESH_JIO_URL)
-    if not jio_content:
-        sys.exit(1)
-        
-    jio_lines = [line.strip() for line in jio_content.splitlines() if line.strip() and not line.strip().upper().startswith("#EXTM3U")]
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    print(f"🕐 Run time: {current_time}")
 
-    # Prepare plaintext
+    jio_content = fetch_url(FRESH_JIO_URL)
+
+    if not jio_content:
+        # ✅ KEEP-ALIVE FIX: Even on fetch failure, write a timestamped placeholder
+        # so the repo always has a new commit keeping workflows alive.
+        print("⚠️ Fetch failed! Writing keep-alive placeholder to avoid stale repo.")
+        placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Source unavailable. Will retry next run.\n"
+        padder = padding.PKCS7(128).padder()
+        padded = padder.update(placeholder.encode('utf-8')) + padder.finalize()
+        cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
+        enc = cipher.encryptor()
+        encrypted = base64.b64encode(enc.update(padded) + enc.finalize()).decode('utf-8')
+        with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
+            f.write(encrypted)
+        sys.exit(0)  # Exit 0 so the workflow commits the placeholder!
+
+    jio_lines = [
+        line.strip() for line in jio_content.splitlines()
+        if line.strip() and not line.strip().upper().startswith("#EXTM3U")
+    ]
+    print(f"📋 Total lines fetched: {len(jio_lines)}")
+
+    # ✅ KEEP-ALIVE FIX: Timestamp is embedded in plaintext so encrypted
+    # output is ALWAYS different → git always has something to commit.
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     for line in jio_lines:
         final_text += line + "\n"
@@ -62,6 +86,8 @@ def main():
 
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
         f.write(base64_encrypted)
+
+    print(f"✅ Successfully generated and encrypted {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
