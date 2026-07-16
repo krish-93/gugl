@@ -16,8 +16,8 @@ TEMPLATE_FILE = "template.m3u"
 FRESH_JIO_URL = "https://thanks-to-veer.saqlainhaider8198.workers.dev/jtv90.m3u[srisk]?ua=sktechtv"
 GK_URL        = "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/lokulu.m3u"
 OUTPUT_FILE   = "helloworld.m3u"
-RETRY_COUNT   = 3
-RETRY_DELAY   = 5
+RETRY_COUNT   = 5
+RETRY_DELAY   = 10
 
 # AES Keys
 SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
@@ -38,9 +38,14 @@ def fetch_url(url, retries=RETRY_COUNT):
     for attempt in range(1, retries + 1):
         try:
             with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
-                return resp.read().decode("utf-8", errors="replace")
-        except:
-            time.sleep(RETRY_DELAY)
+                data = resp.read().decode("utf-8", errors="replace")
+                if data.strip():
+                    print(f"✅ Fetched successfully on attempt {attempt}: {url}")
+                    return data
+        except Exception as e:
+            print(f"⚠️ Attempt {attempt}/{retries} failed for {url}: {e}")
+            if attempt < retries:
+                time.sleep(RETRY_DELAY)
     return ""
 
 def is_url_line(line):
@@ -57,14 +62,14 @@ def get_tvg_id(extinf_line):
 def parse_source_into_blocks(content):
     lines = [l.rstrip() for l in content.splitlines()]
     start_idx = 1 if lines and re.match(r'#\s*EXTM3U', lines[0].strip(), re.IGNORECASE) else 0
-    channels = {}    
+    channels = {}
     current_block = []
-    
+
     for line in lines[start_idx:]:
         stripped = line.strip()
         if not stripped: continue
         current_block.append(stripped)
-        
+
         if is_url_line(stripped):
             tvg_id = next((get_tvg_id(bl) for bl in current_block if re.match(r'#\s*EXTINF', bl, re.IGNORECASE)), None)
             if tvg_id:
@@ -86,38 +91,60 @@ def parse_gk_blocks(content):
             current = []
     return blocks
 
+def write_encrypted(text):
+    padder = padding.PKCS7(128).padder()
+    padded_data = padder.update(text.encode('utf-8')) + padder.finalize()
+    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
+    encryptor = cipher.encryptor()
+    encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
+    base64_encrypted = base64.b64encode(encrypted_data).decode('utf-8')
+    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
+        f.write(base64_encrypted)
+
 def main():
+    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    print(f"🕐 Run time: {current_time}")
+
     if not os.path.exists(TEMPLATE_FILE):
-        sys.exit(1)
+        # ✅ KEEP-ALIVE FIX: No template? Write placeholder & exit cleanly.
+        print("⚠️ Template file not found! Writing keep-alive placeholder.")
+        placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: template.m3u not found.\n"
+        write_encrypted(placeholder)
+        sys.exit(0)
+
     with open(TEMPLATE_FILE, "r", encoding="utf-8", errors="replace") as f:
         tmpl_ids = parse_template_ids(f.read())
+    print(f"📋 Template has {len(tmpl_ids)} channel IDs")
 
     jio_content = fetch_url(FRESH_JIO_URL)
     jio_channels = parse_source_into_blocks(jio_content) if jio_content else {}
+    print(f"📡 JioTV source: {len(jio_channels)} channels found")
 
     matched = [jio_channels[cid] for cid in tmpl_ids if cid in jio_channels]
-    
+    print(f"✅ Matched {len(matched)} channels from template")
+
     gk_content = fetch_url(GK_URL)
     gk_blocks = parse_gk_blocks(gk_content) if gk_content else []
+    print(f"📡 GK source: {len(gk_blocks)} blocks found")
 
-    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
-    
-    # Prepare plaintext
+    # ✅ KEEP-ALIVE FIX: Even if both sources fail, write a timestamped
+    # placeholder so repo stays active and workflow never gets disabled.
+    if not matched and not gk_blocks:
+        print("⚠️ Both sources failed! Writing keep-alive placeholder.")
+        placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Sources unavailable. Will retry next run.\n"
+        write_encrypted(placeholder)
+        sys.exit(0)
+
+    # ✅ KEEP-ALIVE FIX: Timestamp in plaintext ensures encrypted output
+    # is ALWAYS different → git always has something to commit.
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     for block in matched + gk_blocks:
         for line in block:
             final_text += line + "\n"
 
     # 🔥 AES ENCRYPTION 🔥
-    padder = padding.PKCS7(128).padder()
-    padded_data = padder.update(final_text.encode('utf-8')) + padder.finalize()
-    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
-    encryptor = cipher.encryptor()
-    encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
-    base64_encrypted = base64.b64encode(encrypted_data).decode('utf-8')
-
-    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-        f.write(base64_encrypted)
+    write_encrypted(final_text)
+    print(f"✅ Successfully generated and encrypted {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
