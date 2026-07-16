@@ -12,33 +12,27 @@
       "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gioplus.m3u",
       "priority": 2
     },
-      {
-      "id": "server3",
-      "name": "S3-TATA PLAY",
-      "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/are-TP-Sala.m3u",
-      "priority": 4
-    },
     {
       "id": "only 4K",
-      "name": "S4-STAR SHARE",
+      "name": "S3-STAR SHARE",
       "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/livxc.m3u",
       "priority": 3
     },
     {
       "id": "server4",
-      "name": "S5-Only-Telugu",
+      "name": "S4-Only-Telugu",
       "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/helloworld.m3u",
       "priority": 4
     },
     {
       "id": "server5",
-      "name": "S6-Movies V1",
+      "name": "S5-Movies V1",
       "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/movixonein.m3u",
       "priority": 4
     },
     {
       "id": "server6",
-      "name": "S7-Movies V2",
+      "name": "S6-Movies V2",
       "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/oraldmovix.m3u",
       "priority": 4
     }
