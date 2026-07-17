@@ -10,7 +10,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-FRESH_URL     = "https://servertvhub.site/jiotv+/playlist.php"
+FRESH_URL     = "https://pastefy.app/ZH3tseJk/raw"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
