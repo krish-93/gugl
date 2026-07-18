@@ -3,7 +3,7 @@ import urllib.error
 import ssl
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 import base64
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
@@ -45,7 +45,7 @@ def fetch_url(url, retries=RETRY_COUNT):
     return ""
 
 def main():
-    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
     jio_content = fetch_url(FRESH_JIO_URL)
