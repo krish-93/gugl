@@ -1,16 +1,17 @@
+import json
 import urllib.request
 import urllib.error
 import ssl
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 import base64
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-FRESH_URL     = "https://noisy-truth-6766.streamstar18.workers.dev/"
+FRESH_URL     = "https://pllive.bmera5952.workers.dev/"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
@@ -48,7 +49,7 @@ def fetch_url(url, retries=RETRY_COUNT):
     return ""
 
 def main():
-    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
     content = fetch_url(FRESH_URL)
@@ -67,17 +68,47 @@ def main():
             f.write(encrypted)
         sys.exit(0)  # Exit 0 so the workflow commits the placeholder!
 
-    lines = [
-        line.strip() for line in content.splitlines()
-        if line.strip() and not line.strip().upper().startswith("#EXTM3U")
-    ]
-    print(f"📋 Total lines fetched: {len(lines)}")
+    # 🔹 NEW LOGIC: Parse the JSON from the new API
+    channels = []
+    if '[' in content:
+        json_str = content[content.find('['):]
+        channels = json.loads(json_str)
+        print(f"✅ Successfully parsed {len(channels)} channels from JSON!")
 
     # ✅ KEEP-ALIVE FIX: Timestamp embedded in plaintext so encrypted
     # output is ALWAYS different → git always has something to commit.
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
-    for line in lines:
-        final_text += line + "\n"
+    
+    valid_count = 0
+    for ch in channels:
+        name = ch.get('name', 'Unknown')
+        c_id = ch.get('id', '')
+        logo = ch.get('logo', '')
+        group = ch.get('group', 'Uncategorized')
+        mpd_url = ch.get('mpd_url', '')
+        license_url = ch.get('license_url', '')
+        ua = ch.get('user_agent', 'Mozilla/5.0')
+        
+        headers = ch.get('headers', {})
+        cookie = headers.get('cookie', '')
+        
+        if not mpd_url:
+            continue
+            
+        final_url = f"{mpd_url}?{cookie}" if cookie else mpd_url
+        
+        m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}",{name}\n'
+        
+        if license_url:
+            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_type=clearkey\n'
+            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_key={license_url}\n'
+            
+        m3u_entry += f'{final_url}|User-Agent={ua}\n'
+        
+        final_text += m3u_entry
+        valid_count += 1
+        
+    print(f"📋 Total channels processed: {valid_count}")
 
     # 🔥 AES ENCRYPTION 🔥
     padder = padding.PKCS7(128).padder()
