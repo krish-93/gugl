@@ -5,7 +5,7 @@ import ssl
 import sys
 import time
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 import base64
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
@@ -102,7 +102,7 @@ def write_encrypted(text):
         f.write(base64_encrypted)
 
 def main():
-    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
     if not os.path.exists(TEMPLATE_FILE):
