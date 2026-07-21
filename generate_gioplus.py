@@ -20,7 +20,7 @@ RETRY_DELAY   = 10
 SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
 IV         = b"OmniTV_IV_16_Bys"
 
-OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
+OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
 def make_ssl_ctx():
