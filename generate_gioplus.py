@@ -6,12 +6,19 @@ import sys
 import time
 from datetime import datetime, timezone
 import base64
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 WISPY_URL     = "https://wispy-wave-3131.diwij76343.workers.dev/"
-OUTPUT_FILE   = "wispy.m3u"
+OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
+
+# AES Keys - Same as your OmniTV keys
+SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
+IV         = b"OmniTV_IV_16_Bys"
 
 OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
@@ -21,6 +28,16 @@ def make_ssl_ctx():
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
     return ctx
+
+def write_encrypted(text):
+    padder = padding.PKCS7(128).padder()
+    padded_data = padder.update(text.encode('utf-8')) + padder.finalize()
+    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
+    encryptor = cipher.encryptor()
+    encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
+    base64_encrypted = base64.b64encode(encrypted_data).decode('utf-8')
+    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
+        f.write(base64_encrypted)
 
 def hex_to_base64url(hex_str):
     """Converts a hex string to a base64url string without padding."""
@@ -61,8 +78,7 @@ def main():
     if not content:
         print("⚠️ Fetch failed! Writing keep-alive placeholder to avoid stale repo.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Source unavailable. Will retry next run.\n"
-        with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-            f.write(placeholder)
+        write_encrypted(placeholder)
         sys.exit(0)
 
     # Parse JSON
@@ -108,10 +124,9 @@ def main():
         
     print(f"📋 Total channels processed: {valid_count}")
 
-    # Write RAW unencrypted M3U
-    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-        f.write(final_text)
-    print(f"✅ Successfully generated RAW {OUTPUT_FILE}")
+    # 🔥 AES ENCRYPTION 🔥
+    write_encrypted(final_text)
+    print(f"✅ Successfully generated and encrypted {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
