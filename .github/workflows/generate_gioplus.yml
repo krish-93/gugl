@@ -2,6 +2,7 @@ name: Generate GioPlus M3U
 
 on:
   schedule:
+    # Runs every 30 minutes (at minute 20 and 50) to prevent token expiration
     - cron: '20,50 * * * *'
   workflow_dispatch:
 
@@ -36,8 +37,6 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add gioplus.m3u
-          # ✅ KEEP-ALIVE FIX: Always commit (no diff check).
-          # Timestamp in the encrypted file ensures content always changes,
-          # keeping the repo active so GitHub never disables this workflow.
+          # ✅ KEEP-ALIVE FIX: Always commit. Timestamp ensures content changes.
           git commit -m "chore: auto-refresh GioPlus M3U at $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Nothing to commit"
           git push || echo "Nothing to push"
