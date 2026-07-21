@@ -6,21 +6,14 @@ import sys
 import time
 from datetime import datetime, timezone
 import base64
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 WISPY_URL     = "https://wispy-wave-3131.diwij76343.workers.dev/"
-OUTPUT_FILE   = "gioplus.m3u"
+OUTPUT_FILE   = "wispy.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
 
-# AES Keys - Same as your OmniTV keys
-SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
-IV         = b"OmniTV_IV_16_Bys"
-
-OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
+OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
 def make_ssl_ctx():
@@ -59,16 +52,6 @@ def fetch_url(url, retries=RETRY_COUNT):
                 time.sleep(RETRY_DELAY)
     return ""
 
-def write_encrypted(text):
-    padder = padding.PKCS7(128).padder()
-    padded_data = padder.update(text.encode('utf-8')) + padder.finalize()
-    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
-    encryptor = cipher.encryptor()
-    encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
-    base64_encrypted = base64.b64encode(encrypted_data).decode('utf-8')
-    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-        f.write(base64_encrypted)
-
 def main():
     current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
@@ -78,7 +61,8 @@ def main():
     if not content:
         print("⚠️ Fetch failed! Writing keep-alive placeholder to avoid stale repo.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Source unavailable. Will retry next run.\n"
-        write_encrypted(placeholder)
+        with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
+            f.write(placeholder)
         sys.exit(0)
 
     # Parse JSON
@@ -99,7 +83,6 @@ def main():
         logo = ch.get('logo', '')
         group = ch.get('category', 'Uncategorized')
         mpd_url = ch.get('url', '')
-        
         cookie = ch.get('cookie', '')
         keyId_hex = ch.get('keyId', '')
         key_hex = ch.get('key', '')
@@ -109,14 +92,10 @@ def main():
             
         m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}",{name}\n'
         
-        # Format Clearkey DRM using base64 JSON
-        kid_b64 = hex_to_base64url(keyId_hex)
-        key_b64 = hex_to_base64url(key_hex)
-        
-        if kid_b64 and key_b64:
-            clearkey_json = f'{{"keys":[{{"kty":"oct","k":"{key_b64}","kid":"{kid_b64}"}}],"type":"temporary"}}'
+        if keyId_hex and key_hex:
+            clearkey_pair = f'{keyId_hex}:{key_hex}'
             m3u_entry += f'#KODIPROP:inputstream.adaptive.license_type=clearkey\n'
-            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_key={clearkey_json}\n'
+            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_key={clearkey_pair}\n'
             
         # Common OTT user agent and cookie header
         m3u_entry += f'{mpd_url}|User-Agent=Mozilla/5.0'
@@ -129,9 +108,10 @@ def main():
         
     print(f"📋 Total channels processed: {valid_count}")
 
-    # 🔥 AES ENCRYPTION 🔥
-    write_encrypted(final_text)
-    print(f"✅ Successfully generated and encrypted {OUTPUT_FILE}")
+    # Write RAW unencrypted M3U
+    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
+        f.write(final_text)
+    print(f"✅ Successfully generated RAW {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
