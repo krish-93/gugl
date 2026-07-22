@@ -2,7 +2,7 @@ name: Omni M3U Generator
 
 on:
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '20,50 * * * *'
   workflow_dispatch:
 
 permissions:
