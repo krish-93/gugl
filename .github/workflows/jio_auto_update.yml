@@ -2,7 +2,7 @@ name: Generate Jio Raw M3U
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '14,44 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install Dependencies
-        run: pip install cryptography requests
+        run: pip install cryptography
 
       - name: Run Jio Generator Script
         run: python generate_jio.py
@@ -35,10 +35,9 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          
-          # కంటెంట్ మారకపోయినా టైమ్ అప్‌డేట్ అవ్వడానికి ఈ లైన్ యాడ్ చేశాం
-          echo "# Last Refreshed: $(date)" >> gio.m3u
-          
           git add gio.m3u
-          git commit -m "chore: auto-refresh Jio M3U at $(date -u)" || echo "No changes to commit"
-          git push
+          # ✅ KEEP-ALIVE FIX: Always commit (no diff check).
+          # Timestamp in the encrypted file ensures content always changes,
+          # keeping the repo active so GitHub never disables this workflow.
+          git commit -m "chore: auto-refresh Jio M3U at $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Nothing to commit"
+          git push || echo "Nothing to push"
