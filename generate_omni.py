@@ -101,6 +101,15 @@ def write_encrypted(text):
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
         f.write(base64_encrypted)
 
+def decrypt_text(base64_text):
+    encrypted_data = base64.b64decode(base64_text.strip())
+    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
+    decryptor = cipher.decryptor()
+    padded_data = decryptor.update(encrypted_data) + decryptor.finalize()
+    unpadder = padding.PKCS7(128).unpadder()
+    data = unpadder.update(padded_data) + unpadder.finalize()
+    return data.decode('utf-8')
+
 def main():
     current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
@@ -124,6 +133,13 @@ def main():
     print(f"✅ Matched {len(matched)} channels from template")
 
     gk_content = fetch_url(GK_URL)
+    if gk_content:
+        try:
+            gk_content_dec = decrypt_text(gk_content)
+            print("🔓 Successfully decrypted GK source.")
+            gk_content = gk_content_dec
+        except Exception as e:
+            print(f"⚠️ Could not decrypt GK source (might be plaintext): {e}")
     gk_blocks = parse_gk_blocks(gk_content) if gk_content else []
     print(f"📡 GK source: {len(gk_blocks)} blocks found")
 
