@@ -20,7 +20,7 @@
     },
     {
       "id": "server4",
-      "name": "S4-Only-Telugu 1",
+      "name": "S4-Only-Telugu",
       "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/helloworld.m3u",
       "priority": 4
     },
