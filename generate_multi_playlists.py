@@ -18,10 +18,6 @@ PLAYLISTS = [
         "category": "Jio Star"
     },
     {
-        "url": "https://thanks-to-veer.saqlainhaider8198.workers.dev/slivww.m3u[skliv]?ua=sktechtv",
-        "category": "Sony"
-    },
-    {
         "url": "https://nonyliv.saqlainhaider8198.workers.dev/nony2.m3u",
         "category": "SonyLiv"
     }
