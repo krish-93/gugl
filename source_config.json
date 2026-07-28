@@ -47,6 +47,12 @@
       "name": "S8-FANCODE LIVE",
       "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/fcliv.m3u",
       "priority": 8
+    },
+     {
+      "id": "server9",
+      "name": "S9-JIOSTAR-SONYLiv",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/mixed_live.m3u",
+      "priority": 9
     }
   ],
   "epgUrl": "https://your-server.com/epg.xml.gz"
