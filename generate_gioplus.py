@@ -1,4 +1,3 @@
-import json
 import urllib.request
 import urllib.error
 import ssl
@@ -39,22 +38,12 @@ def write_encrypted(text):
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
         f.write(base64_encrypted)
 
-def hex_to_base64url(hex_str):
-    """Converts a hex string to a base64url string without padding."""
-    if not hex_str or hex_str.lower() == "null":
-        return None
-    try:
-        bytes_data = bytes.fromhex(hex_str)
-        b64 = base64.urlsafe_b64encode(bytes_data).decode('utf-8')
-        return b64.rstrip('=')
-    except:
-        return None
-
 def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
+    # ఇక్కడ OTT Navigator User-Agent యాడ్ చేశాం
     req = urllib.request.Request(url, headers={
-        "User-Agent": "Mozilla/5.0",
-        "Accept": "application/json"
+        "User-Agent": "OTT Navigator",
+        "Accept": "*/*"
     })
     for attempt in range(1, retries + 1):
         try:
@@ -81,50 +70,30 @@ def main():
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # Parse JSON
-    channels = []
-    try:
-        channels = json.loads(content)
-        print(f"✅ Successfully parsed {len(channels)} channels from JSON!")
-    except Exception as e:
-        print(f"⚠️ JSON parsing error: {e}")
-        sys.exit(1)
-
+    # కొత్త URL డైరెక్ట్ గా M3U ఇస్తుంది, JSON కాదు. కాబట్టి JSON పార్సింగ్ తీసేశాను.
+    lines = content.splitlines()
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
     valid_count = 0
-    for ch in channels:
-        name = ch.get('name', 'Unknown')
-        c_id = ch.get('id', '')
-        logo = ch.get('logo', '')
-        group = ch.get('category', 'Uncategorized')
-        
-        # 🔥 MAIN FIX HERE: Tries 'mpd' first, then 'url'
-        mpd_url = ch.get('mpd', ch.get('url', ''))
-        
-        cookie = ch.get('cookie', '')
-        keyId_hex = ch.get('keyId', '')
-        key_hex = ch.get('key', '')
-        
-        if not mpd_url:
+    
+    for line in lines:
+        line = line.strip()
+        if not line:
             continue
             
-        m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}",{name}\n'
-        
-        if keyId_hex and key_hex:
-            clearkey_pair = f'{keyId_hex}:{key_hex}'
-            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_type=clearkey\n'
-            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_key={clearkey_pair}\n'
+        # పాత #EXTM3U ని స్కిప్ చేస్తున్నాం ఎందుకంటే మనం ఆల్రెడీ పైన EPG తో మన ఓన్ హెడర్ పెట్టుకున్నాం
+        if line.startswith("#EXTM3U"):
+            continue
             
-        # Common OTT user agent and cookie header
-        m3u_entry += f'{mpd_url}|User-Agent=Mozilla/5.0'
-        if cookie:
-            m3u_entry += f'&Cookie={cookie}'
-        m3u_entry += '\n'
-        
-        final_text += m3u_entry
-        valid_count += 1
-        
+        # ఇది ఛానెల్ ప్లేబ్యాక్ URL లైన్ అయితే...
+        if line.startswith("http"):
+            # మన ప్లేయర్ కూడా అదే User-Agent తో ప్లే చేయడానికి యాడ్ చేస్తున్నాం
+            if "|User-Agent=" not in line:
+                line = f"{line}|User-Agent=OTT Navigator"
+            valid_count += 1
+            
+        final_text += line + "\n"
+
     print(f"📋 Total channels processed: {valid_count}")
 
     # 🔥 AES ENCRYPTION 🔥
