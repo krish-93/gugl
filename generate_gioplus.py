@@ -98,7 +98,10 @@ def main():
         c_id = ch.get('id', '')
         logo = ch.get('logo', '')
         group = ch.get('category', 'Uncategorized')
-        mpd_url = ch.get('url', '')
+        
+        # 🔥 MAIN FIX HERE: Tries 'mpd' first, then 'url'
+        mpd_url = ch.get('mpd', ch.get('url', ''))
+        
         cookie = ch.get('cookie', '')
         keyId_hex = ch.get('keyId', '')
         key_hex = ch.get('key', '')
