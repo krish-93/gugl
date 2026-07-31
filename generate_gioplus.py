@@ -11,7 +11,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-WISPY_URL     = "https://newjiomblive.bmera5952.workers.dev/"
+WISPY_URL     = "https://gojojtv.gojosare123.workers.dev/"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
