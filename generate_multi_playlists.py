@@ -18,6 +18,10 @@ PLAYLISTS = [
         "category": "Jio Star"
     },
     {
+        "url": "https://jhsevetns-fhd.rtxcric.workers.dev/playlist.m3u",
+        "category": "Hotstar Events"
+    },
+   {
         "url": "https://nonyliv.saqlainhaider8198.workers.dev/nony2.m3u",
         "category": "SonyLiv"
     }
