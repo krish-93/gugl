@@ -35,4 +35,6 @@ jobs:
           git add mixed_live.m3u
           # Commit only if there are changes
           git commit -m "Auto-update Mixed Live playlist: $(date -u)" || echo "No changes to commit"
-          git push
+          # పుష్ చేయడానికి ముందు పుల్ చేయాలి (ఎర్రర్ రాకుండా)
+          git pull --rebase origin main
+          git push 
