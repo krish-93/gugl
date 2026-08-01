@@ -35,4 +35,6 @@ jobs:
           git add fcliv.m3u
           # Commit only if there are changes
           git commit -m "Auto-update FanCode playlist: $(date -u)" || echo "No changes to commit"
+          # పుష్ చేయడానికి ముందు వేరే ఏమైనా మార్పులు ఉంటే వాటిని పుల్ చేసుకుంటుంది 
+          git pull --rebase origin main
           git push
