@@ -17,6 +17,10 @@ PLAYLISTS = [
         "url": "https://thanks-to-veer.saqlainhaider8198.workers.dev/jstar.m3u[jtvf]?ua=sktechtv",
         "category": "Jio Star"
     },
+       {
+        "url": "https://jhsevetns-fhd.rtxcric.workers.dev/playlist.m3u",
+        "category": "Hotstar Events"
+    },
    {
         "url": "https://nonyliv.saqlainhaider8198.workers.dev/nony2.m3u",
         "category": "SonyLiv"
