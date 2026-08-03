@@ -13,7 +13,7 @@ from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 TEMPLATE_FILE = "template.m3u"
-FRESH_JIO_URL = "https://thanks-to-veer.saqlainhaider8198.workers.dev/jtv90.m3u[srisk]?ua=sktechtv"
+FRESH_JIO_URL = "https://raw.githubusercontent.com/Sflex0719/m3u/refs/heads/main/ZioMobile.m3u"
 GK_URL        = "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/lokulu.m3u"
 OUTPUT_FILE   = "helloworld.m3u"
 RETRY_COUNT   = 5
