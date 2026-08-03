@@ -10,7 +10,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-FRESH_JIO_URL = "https://raw.githubusercontent.com/SSK4570live/TV-/refs/heads/main/jtv.m3u"
+FRESH_JIO_URL = "https://raw.githubusercontent.com/Sflex0719/m3u/refs/heads/main/ZioMobile.m3u"
 OUTPUT_FILE   = "gio.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
