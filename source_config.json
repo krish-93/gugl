@@ -32,27 +32,15 @@
     },
     {
       "id": "server6",
-      "name": "S6-Movies V1",
-      "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/movixonein.m3u",
+      "name": "S6-FANCODE LIVE",
+      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/fcliv.m3u",
       "priority": 6
     },
-    {
-      "id": "server7",
-      "name": "S7-Movies V2",
-      "url": "https://raw.githubusercontent.com/krish-93/bhai/refs/heads/main/oraldmovix.m3u",
-      "priority": 7
-    },
-    {
-      "id": "server8",
-      "name": "S8-FANCODE LIVE",
-      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/fcliv.m3u",
-      "priority": 8
-    },
      {
-      "id": "server9",
-      "name": "S9-JIOSTAR - SONYLIV",
+      "id": "server7",
+      "name": "S7-JIOSTAR - SONYLIV",
       "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/mixed_live.m3u",
-      "priority": 9
+      "priority": 7
     }
   ],
   "epgUrl": "https://your-server.com/epg.xml.gz"
