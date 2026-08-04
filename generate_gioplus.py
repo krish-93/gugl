@@ -10,7 +10,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-WISPY_URL     = "https://raw.githubusercontent.com/SSK4570live/TV-/refs/heads/main/jtv.m3u"
+WISPY_URL     = "https://yashzeotvplus.livenoww.workers.dev/"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
