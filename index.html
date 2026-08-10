@@ -1,1 +1,567 @@
-<h1>OmniTV Server Active</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniTV - Stream Everything, Anywhere</title>
+    <meta name="description" content="OmniTV - Premium IPTV Streaming. Watch 500+ Live Channels in HD quality. Join us on Telegram for updates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #7c3aed;
+            --secondary: #2563eb;
+            --accent: #06b6d4;
+            --pink: #ec4899;
+            --dark: #040410;
+            --card-bg: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--dark);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Animated background */
+        .bg-gradient {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124,58,237,0.25) 0%, transparent 60%),
+                        radial-gradient(ellipse 60% 50% at 80% 90%, rgba(6,182,212,0.2) 0%, transparent 60%),
+                        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(37,99,235,0.1) 0%, transparent 70%),
+                        #040410;
+        }
+
+        /* Stars */
+        .stars {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            animation: twinkle var(--dur, 3s) ease-in-out infinite alternate;
+            opacity: var(--op, 0.5);
+        }
+        @keyframes twinkle {
+            from { opacity: var(--op, 0.3); transform: scale(1); }
+            to   { opacity: calc(var(--op, 0.3) * 0.2); transform: scale(0.6); }
+        }
+
+        /* Floating orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float-orb 8s ease-in-out infinite alternate;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .orb-1 { width: 400px; height: 400px; background: rgba(124,58,237,0.15); top: -100px; left: -100px; animation-delay: 0s; }
+        .orb-2 { width: 300px; height: 300px; background: rgba(6,182,212,0.12); bottom: -80px; right: -80px; animation-delay: 3s; }
+        .orb-3 { width: 250px; height: 250px; background: rgba(236,72,153,0.1); top: 40%; left: 40%; animation-delay: 1.5s; }
+
+        @keyframes float-orb {
+            from { transform: translate(0, 0) scale(1); }
+            to   { transform: translate(40px, 30px) scale(1.1); }
+        }
+
+        /* Layout */
+        .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Navbar */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 18px 0;
+            background: rgba(4,4,16,0.6);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo {
+            display: flex; align-items: center; gap: 12px;
+            font-size: 1.5rem; font-weight: 900;
+            background: linear-gradient(90deg, #a78bfa, #38bdf8, #ec4899);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .logo-icon {
+            width: 38px; height: 38px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+            box-shadow: 0 0 20px rgba(124,58,237,0.5);
+        }
+        .nav-badge {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.6); }
+            50%  { box-shadow: 0 0 0 8px rgba(124,58,237,0); }
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            padding: 120px 0 80px;
+        }
+
+        .hero-tag {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(124,58,237,0.15);
+            border: 1px solid rgba(124,58,237,0.3);
+            color: #a78bfa;
+            font-size: 0.82rem; font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 32px;
+            animation: fade-up 0.6s ease both;
+            letter-spacing: 0.5px;
+        }
+        .hero-tag .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+        h1 {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            animation: fade-up 0.7s ease both 0.1s;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: rgba(255,255,255,0.55);
+            max-width: 560px;
+            line-height: 1.7;
+            margin-bottom: 48px;
+            font-weight: 300;
+            animation: fade-up 0.7s ease both 0.2s;
+        }
+
+        .btn-group { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fade-up 0.7s ease both 0.3s; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 1rem; font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer; border: none;
+            letter-spacing: 0.3px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 8px 30px rgba(124,58,237,0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(124,58,237,0.55);
+        }
+        .btn-secondary {
+            background: var(--card-bg);
+            color: rgba(255,255,255,0.85);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-3px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex; gap: 48px; justify-content: center; flex-wrap: wrap;
+            margin-top: 72px;
+            padding-top: 48px;
+            border-top: 1px solid var(--border);
+            animation: fade-up 0.7s ease both 0.4s;
+        }
+        .stat { text-align: center; }
+        .stat-num {
+            font-size: 2.2rem; font-weight: 900;
+            background: linear-gradient(135deg, #a78bfa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block; margin-bottom: 4px;
+        }
+        .stat-label { color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 400; }
+
+        /* Features */
+        .features { padding: 100px 0; }
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        .section-sub { text-align: center; color: rgba(255,255,255,0.4); margin-bottom: 56px; font-size: 1rem; }
+
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(124,58,237,0.08), transparent);
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+        .feature-card:hover { transform: translateY(-6px); border-color: rgba(124,58,237,0.3); }
+        .feature-card:hover::before { opacity: 1; }
+
+        .feat-icon {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+        .feat-icon.purple { background: rgba(124,58,237,0.2); }
+        .feat-icon.blue   { background: rgba(37,99,235,0.2); }
+        .feat-icon.cyan   { background: rgba(6,182,212,0.2); }
+        .feat-icon.pink   { background: rgba(236,72,153,0.2); }
+        .feat-icon.green  { background: rgba(34,197,94,0.2); }
+        .feat-icon.orange { background: rgba(249,115,22,0.2); }
+
+        .feat-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .feat-desc { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.65; }
+
+        /* Telegram CTA */
+        .tg-section {
+            padding: 80px 0;
+        }
+        .tg-card {
+            background: linear-gradient(135deg, rgba(37,99,235,0.15), rgba(124,58,237,0.15));
+            border: 1px solid rgba(37,99,235,0.25);
+            border-radius: 28px;
+            padding: 56px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .tg-card::before {
+            content: '';
+            position: absolute;
+            top: -60px; left: 50%; transform: translateX(-50%);
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(37,99,235,0.2), transparent 70%);
+            pointer-events: none;
+        }
+        .tg-icon-big { font-size: 4rem; margin-bottom: 20px; display: block; animation: float-icon 3s ease-in-out infinite alternate; }
+        @keyframes float-icon {
+            from { transform: translateY(0); }
+            to   { transform: translateY(-10px); }
+        }
+        .tg-card h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; margin-bottom: 12px; }
+        .tg-card p { color: rgba(255,255,255,0.5); margin-bottom: 36px; font-size: 1rem; line-height: 1.65; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.25);
+            font-size: 0.85rem;
+        }
+
+        /* TV animation */
+        .tv-showcase {
+            position: relative;
+            margin: 60px auto 0;
+            max-width: 700px;
+            animation: fade-up 0.7s ease both 0.5s;
+        }
+        .tv-frame {
+            background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .tv-screen {
+            background: linear-gradient(135deg, #0f0a1e, #0d1117);
+            border-radius: 14px;
+            padding: 32px;
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            min-height: 180px; align-items: center;
+        }
+        .channel-chip {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 100px;
+            padding: 8px 16px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+            animation: chip-float var(--d, 4s) ease-in-out infinite alternate;
+            letter-spacing: 0.3px;
+        }
+        .channel-chip.live {
+            border-color: rgba(239,68,68,0.4);
+            color: #fca5a5;
+        }
+        .channel-chip.live::before {
+            content: '● ';
+            color: #ef4444;
+            animation: blink 1s ease-in-out infinite;
+        }
+        @keyframes chip-float {
+            from { transform: translateY(0); }
+            to   { transform: translateY(-6px); }
+        }
+
+        /* Scroll reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.4); border-radius: 3px; }
+
+        @media (max-width: 640px) {
+            .stats { gap: 28px; }
+            .tg-card { padding: 36px 24px; }
+            .btn { padding: 13px 22px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <!-- Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Floating orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <div class="logo">
+                    <div class="logo-icon">📺</div>
+                    OmniTV
+                </div>
+                <span class="nav-badge">LIVE</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-tag">
+                <span class="dot"></span>
+                500+ Live Channels · HD Quality
+            </div>
+
+            <h1>
+                Watch <span class="gradient-text">Everything</span><br>
+                Stream Anywhere
+            </h1>
+
+            <p class="hero-sub">
+                Premium IPTV experience with Jio, Sun TV, Zee, Star, and hundreds more live channels. Join our Telegram for updates.
+            </p>
+
+            <div class="btn-group">
+                <a href="https://t.me/omnitv1" class="btn btn-primary" target="_blank">
+                    ✈️ Join Telegram Channel
+                </a>
+                <a href="https://t.me/omnitv1" class="btn btn-secondary" target="_blank">
+                    📥 Get App
+                </a>
+            </div>
+
+            <!-- TV Showcase -->
+            <div class="tv-showcase">
+                <div class="tv-frame">
+                    <div class="tv-screen">
+                        <span class="channel-chip live" style="--d:3s">Jio TV</span>
+                        <span class="channel-chip live" style="--d:4s">Sun TV</span>
+                        <span class="channel-chip live" style="--d:3.5s">Star Plus</span>
+                        <span class="channel-chip live" style="--d:5s">Zee TV</span>
+                        <span class="channel-chip live" style="--d:2.5s">Colors</span>
+                        <span class="channel-chip" style="--d:4.5s">Gemini TV</span>
+                        <span class="channel-chip" style="--d:3.2s">ETV Telugu</span>
+                        <span class="channel-chip" style="--d:5.5s">Star Sports</span>
+                        <span class="channel-chip" style="--d:2.8s">Sony LIV</span>
+                        <span class="channel-chip live" style="--d:4.2s">News18</span>
+                        <span class="channel-chip" style="--d:3.8s">Discovery</span>
+                        <span class="channel-chip" style="--d:4.8s">+ 500 more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Live Channels</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">HD</span>
+                    <span class="stat-label">Stream Quality</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">24/7</span>
+                    <span class="stat-label">Always Live</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">Free</span>
+                    <span class="stat-label">To Join</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title reveal">Why <span class="gradient-text">OmniTV?</span></h2>
+            <p class="section-sub reveal">Everything you need for premium live streaming</p>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feat-icon purple">📺</div>
+                    <div class="feat-title">500+ Live Channels</div>
+                    <div class="feat-desc">Jio, Star, Zee, Sun, Sony, Colors and more — all in one place with HD quality streams.</div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon cyan">⚡</div>
+                    <div class="feat-title">Zero Buffering</div>
+                    <div class="feat-desc">Smart buffer management ensures smooth playback. Channels start instantly without delay.</div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon blue">🔄</div>
+                    <div class="feat-title">Instant Updates</div>
+                    <div class="feat-desc">Playlists are refreshed in seconds via Cloudflare CDN. You always get fresh, working links.</div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon green">📱</div>
+                    <div class="feat-title">TV & Mobile</div>
+                    <div class="feat-desc">Dedicated Android TV and mobile apps optimized for the best viewing experience on any screen.</div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon pink">✈️</div>
+                    <div class="feat-title">Telegram Updates</div>
+                    <div class="feat-desc">All updates, new channels, and announcements sent directly to our Telegram community.</div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon orange">🛡️</div>
+                    <div class="feat-title">Always Working</div>
+                    <div class="feat-desc">99.9% uptime powered by Cloudflare global edge network — fastest CDN worldwide.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram CTA -->
+    <section class="tg-section">
+        <div class="container">
+            <div class="tg-card reveal">
+                <span class="tg-icon-big">✈️</span>
+                <h2>Join Our <span class="gradient-text">Telegram</span> Channel</h2>
+                <p>
+                    Get the latest channels, playlist updates, app downloads, and announcements instantly. 
+                    Join thousands of viewers on OmniTV Telegram.
+                </p>
+                <a href="https://t.me/omnitv1" class="btn btn-primary" target="_blank">
+                    ✈️ t.me/omnitv1 — Join Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 OmniTV · All Rights Reserved · <a href="https://t.me/omnitv1" style="color:#7c3aed;text-decoration:none;">Telegram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 120; i++) {
+            const star = document.createElement('div');
+            const size = Math.random() * 2.5 + 0.5;
+            star.className = 'star';
+            star.style.cssText = `
+                width:${size}px; height:${size}px;
+                top:${Math.random()*100}vh;
+                left:${Math.random()*100}vw;
+                --op:${Math.random()*0.6+0.1};
+                --dur:${Math.random()*4+2}s;
+                animation-delay:${Math.random()*5}s;
+            `;
+            starsContainer.appendChild(star);
+        }
+
+        // Scroll reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
