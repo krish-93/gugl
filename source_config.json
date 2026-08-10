@@ -3,7 +3,7 @@
     {
       "id": "main",
       "name": "S1-JIO TV",
-      "url": "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/gio.m3u",
+      "url": "https://gugl.pages.dev/jio.m3u",
       "priority": 1
     },
     {
