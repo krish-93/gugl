@@ -1,0 +1,2 @@
+# NOTE: Do NOT redirect .m3u files - the app needs to fetch them directly!
+# Only the root page shows the landing page (index.html handles that automatically)
