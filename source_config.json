@@ -3,7 +3,7 @@
     {
       "id": "main",
       "name": "S1-JIO TV",
-      "url": "https://gugl.pages.dev/jio.m3u",
+      "url": "https://omnitv.pages.dev/jtv.m3u",
       "priority": 1
     },
     {
