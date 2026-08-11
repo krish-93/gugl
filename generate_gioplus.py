@@ -1,3 +1,4 @@
+import json
 import urllib.request
 import urllib.error
 import ssl
@@ -10,7 +11,8 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-WISPY_URL     = "https://yashzeotvplus.livenoww.workers.dev/"
+# కొత్త JSON URL 
+WISPY_URL     = "https://upaidworker.streamxlive.workers.dev/"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
@@ -42,7 +44,7 @@ def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
     req = urllib.request.Request(url, headers={
         "User-Agent": "OTT Navigator",
-        "Accept": "*/*"
+        "Accept": "application/json"
     })
     for attempt in range(1, retries + 1):
         try:
@@ -69,19 +71,51 @@ def main():
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # JSON కి బదులు M3U ఫైల్ ని ప్రాసెస్ చేసే లాజిక్ 
-    jio_lines = [
-        line.strip() for line in content.splitlines()
-        if line.strip() and not line.strip().upper().startswith("#EXTM3U")
-    ]
-    
-    print(f"📋 Total M3U lines processed: {len(jio_lines)}")
+    # Parse JSON
+    channels = []
+    try:
+        channels = json.loads(content)
+        print(f"✅ Successfully parsed {len(channels)} channels from JSON!")
+    except Exception as e:
+        print(f"⚠️ JSON parsing error: {e}")
+        sys.exit(1)
 
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
-    # ప్రతి లైన్ ని ఫైనల్ టెక్స్ట్ కి యాడ్ చేయడం
-    for line in jio_lines:
-        final_text += line + "\n"
+    valid_count = 0
+    for ch in channels:
+        name = ch.get('name', 'Unknown')
+        c_id = ch.get('id', '')
+        logo = ch.get('logo', '')
+        group = ch.get('category', 'Uncategorized')
+        
+        # 'url' నుండి లింక్ తీసుకుంటుంది
+        mpd_url = ch.get('mpd', ch.get('url', ''))
+        
+        cookie = ch.get('cookie', '')
+        keyId_hex = ch.get('keyId', '')
+        key_hex = ch.get('key', '')
+        
+        if not mpd_url or mpd_url == "null":
+            continue
+            
+        m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}",{name}\n'
+        
+        if keyId_hex and key_hex and keyId_hex != "null" and key_hex != "null":
+            clearkey_pair = f'{keyId_hex}:{key_hex}'
+            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_type=clearkey\n'
+            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_key={clearkey_pair}\n'
+            
+        # Common OTT user agent and cookie header
+        m3u_entry += f'{mpd_url}|User-Agent=OTT Navigator'
+        if cookie and cookie != "null":
+            m3u_entry += f'&Cookie={cookie}'
+        m3u_entry += '\n'
+        
+        final_text += m3u_entry
+        valid_count += 1
+        
+    print(f"📋 Total channels processed: {valid_count}")
 
     # 🔥 AES ENCRYPTION 🔥
     write_encrypted(final_text)
