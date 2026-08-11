@@ -87,27 +87,35 @@ def main():
         name = ch.get('name', 'Unknown')
         c_id = ch.get('id', '')
         logo = ch.get('logo', '')
-        group = ch.get('category', 'Uncategorized')
         
-        # 'url' నుండి లింక్ తీసుకుంటుంది
-        mpd_url = ch.get('mpd', ch.get('url', ''))
+        # పాత JSON లో 'category', కానీ కొత్త దాంట్లో 'group'
+        group = ch.get('group', ch.get('category', 'Uncategorized'))
         
-        cookie = ch.get('cookie', '')
-        keyId_hex = ch.get('keyId', '')
-        key_hex = ch.get('key', '')
+        # కొత్త JSON లో లింక్ 'mpd_url' లో ఉంది
+        mpd_url = ch.get('mpd_url', ch.get('url', ''))
+        
+        # కొత్త JSON లో 'cookie' 'headers' అనే ఆబ్జెక్ట్ లోపల ఉంది
+        headers = ch.get('headers', {})
+        cookie = headers.get('cookie', ch.get('cookie', ''))
+        
+        # CloudPlay license URL & User Agent
+        license_url = ch.get('license_url', '')
+        user_agent = ch.get('user_agent', 'OTT Navigator')
         
         if not mpd_url or mpd_url == "null":
             continue
             
-        m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}",{name}\n'
+        # OmniTV కి అర్థమయ్యేలా license_url ని డైరెక్ట్ గా EXTINF లోకి ఇస్తున్నాం
+        m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}"'
         
-        if keyId_hex and key_hex and keyId_hex != "null" and key_hex != "null":
-            clearkey_pair = f'{keyId_hex}:{key_hex}'
-            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_type=clearkey\n'
-            m3u_entry += f'#KODIPROP:inputstream.adaptive.license_key={clearkey_pair}\n'
+        if license_url and license_url != "null":
+            # Cloudplay license servers అన్నీ "clearkey_get" వాడాలి
+            m3u_entry += f' license_type="clearkey_get" license_key="{license_url}"'
             
-        # Common OTT user agent and cookie header
-        m3u_entry += f'{mpd_url}|User-Agent=OTT Navigator'
+        m3u_entry += f',{name}\n'
+            
+        # URL తో పాటు User-Agent మరియు Cookie ని pipe (|) ద్వారా add చేస్తున్నాం
+        m3u_entry += f'{mpd_url}|User-Agent={user_agent}'
         if cookie and cookie != "null":
             m3u_entry += f'&Cookie={cookie}'
         m3u_entry += '\n'
