@@ -80,11 +80,20 @@ def parse_source_into_blocks(content):
             url_line = url_line[1:]
             
         # 🟢 CRITICAL FIX FOR OMNITV (ExoPlayer):
-        # లింక్ చివర |User-Agent= ఉంటే దాన్ని కట్ చేసి ప్యూర్ లింక్ ఉంచాలి
+        # లింక్ చివర |User-Agent= ఉంటే దాన్ని కట్ చేసి, దానికి బదులు #EXTVLCOPT ని యాడ్ చేయాలి
+        ua_line = None
         if "|" in url_line:
-            url_line = url_line.split("|")[0]
+            parts = url_line.split("|")
+            url_line = parts[0]
+            for param in parts[1:]:
+                if param.startswith("User-Agent="):
+                    ua = param.split("=", 1)[1]
+                    ua_line = f"#EXTVLCOPT:http-user-agent={ua}"
             
         block_lines = [url_line]
+        if ua_line:
+            block_lines.insert(0, ua_line)
+            
         extinf_found = False
         
         for j in range(idx - 1, last_claimed_idx, -1):
@@ -179,6 +188,8 @@ def main():
                     for line in block:
                         if line.upper().startswith("#EXTINF"):
                             new_block.append(set_group_title_telugu(line))
+                            # 🟢 ZEE ఛానల్స్ కి బ్రౌజర్ User-Agent ఉంటేనే ప్లే అవుతాయి! 
+                            new_block.append("#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36")
                         else:
                             new_block.append(line)
                     zee_dict[name] = new_block
@@ -196,11 +207,11 @@ def main():
             group = normalize_text(get_group_title(extinf))
             name = normalize_text(get_channel_name(extinf))
             
-            # 🟢 FIX: ZEE ఛానల్స్ ని స్కిప్ చేస్తున్నాం (మనం పైన ZEE5 సోర్స్ వాడుతున్నాం కాబట్టి)
+            # 🟢 ZEE ఛానల్స్ ని స్కిప్ చేస్తున్నాం (మనం పైన ZEE5 సోర్స్ వాడుతున్నాం కాబట్టి)
             if "zee telugu" in name or "zee cinemalu" in name:
                 continue
                 
-            # 🟢 FIX: Gemini Movies HD కి సంబంధించిన పాత పనికిరాని SD Key ఉంటే స్కిప్ చెయ్
+            # 🟢 Gemini Movies HD కి సంబంధించిన పాత పనికిరాని SD Key ఉంటే స్కిప్ చెయ్
             if "0c37231880034787bce9fd3607aa09ea" in block_str:
                 continue
 
@@ -230,7 +241,7 @@ def main():
     
     remaining_telugu_blocks = list(telugu_dict.values())
     
-    # 🟢 FIX: Zee ఛానల్స్ అందరికంటే పైన (నంబర్ 1, 2) రావాలని అడిగారు కాబట్టి వాటిని ముందు యాడ్ చేస్తున్నాం!
+    # 🟢 Zee ఛానల్స్ అందరికంటే పైన (నంబర్ 1, 2) రావాలని అడిగారు కాబట్టి వాటిని ముందు యాడ్ చేస్తున్నాం!
     final_telugu_blocks = zee_blocks + ordered_telugu_blocks + remaining_telugu_blocks
     
     print(f"✅ Final list: {len(zee_blocks)} Zee + {len(ordered_telugu_blocks)} Ordered + {len(remaining_telugu_blocks)} Remaining")
