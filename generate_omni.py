@@ -35,7 +35,13 @@ def make_ssl_ctx():
 
 def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
-    req = urllib.request.Request(url, headers={"User-Agent": "sktechtv", "Accept": "*/*"})
+    # tvtelugu కోసం OTT Navigator User-Agent వాడుతున్నాము
+    if "tvtelugu" in url:
+        ua = "OTT Navigator IPTV/1.6.7.4 (Linux; Android 11)"
+    else:
+        ua = "sktechtv"
+        
+    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "*/*"})
     for attempt in range(1, retries + 1):
         try:
             with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
@@ -64,11 +70,8 @@ def get_group_title(extinf_line):
     return ""
 
 def set_group_title_telugu(extinf_line):
-    # Remove existing group-title completely
     line = re.sub(r'group-title="[^"]*"', '', extinf_line).strip()
-    # Remove double spaces just in case
     line = re.sub(r'\s+', ' ', line)
-    # Insert group-title="Telugu" right before the comma
     line = re.sub(r',([^,]*)$', r' group-title="Telugu",\1', line)
     return line
 
@@ -77,12 +80,10 @@ def parse_source_into_blocks(content):
     start_idx = 1 if lines and re.match(r'#\s*EXTM3U', lines[0].strip(), re.IGNORECASE) else 0
     blocks = []
     current_block = []
-
     for line in lines[start_idx:]:
         stripped = line.strip()
         if not stripped: continue
         current_block.append(stripped)
-
         if is_url_line(stripped):
             blocks.append(current_block[:])
             current_block = []
@@ -124,11 +125,9 @@ def main():
     current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
-    # 1. Parse order from temp.m3u
     temp_order = parse_temp_order(TEMP_M3U_FILE)
     print(f"📋 Found {len(temp_order)} channels in temp.m3u for ordering")
 
-    # 2. Fetch ZEE5 channels and extract Zee Telugu HD & Zee Cinemalu HD
     zee5_content = fetch_url(ZEE5_URL)
     zee_blocks = []
     if zee5_content:
@@ -137,7 +136,6 @@ def main():
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             name = get_channel_name(extinf)
             if "zee telugu hd" in name or "zee cinemalu hd" in name:
-                # Modify category to only "Telugu"
                 new_block = []
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
@@ -147,7 +145,6 @@ def main():
                 zee_blocks.append(new_block)
         print(f"📡 ZEE5 source: extracted {len(zee_blocks)} specific Zee channels")
 
-    # 3. Fetch tvtelugu channels and filter Telugu category
     tvtelugu_content = fetch_url(TVTELUGU_URL)
     telugu_blocks = []
     if tvtelugu_content:
@@ -155,8 +152,6 @@ def main():
         for block in all_tvtelugu_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             group = get_group_title(extinf)
-            
-            # Filter if the original category has "telugu"
             if "telugu" in group:
                 new_block = []
                 for line in block:
@@ -167,27 +162,21 @@ def main():
                 telugu_blocks.append(new_block)
         print(f"📡 tvtelugu source: extracted {len(telugu_blocks)} Telugu channels")
 
-    # Order telugu_blocks according to temp.m3u
     ordered_telugu_blocks = []
-    
-    # Create a dictionary for quick lookup by channel name
     telugu_dict = {}
     for block in telugu_blocks:
         extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
         name = get_channel_name(extinf)
         telugu_dict[name] = block
 
-    # Add channels in the exact order found in temp.m3u
     for name in temp_order:
         if name in telugu_dict:
             ordered_telugu_blocks.append(telugu_dict.pop(name))
     
-    # Whatever is left in the dictionary wasn't in temp.m3u, append them at the end
     remaining_telugu_blocks = list(telugu_dict.values())
     final_telugu_blocks = ordered_telugu_blocks + remaining_telugu_blocks
     print(f"✅ Ordered {len(ordered_telugu_blocks)} tvtelugu channels matching temp.m3u (appended {len(remaining_telugu_blocks)} extras)")
 
-    # 4. Fetch GK channels (lokulu) - Don't change categories or order
     gk_content = fetch_url(GK_URL)
     if gk_content:
         try:
@@ -199,32 +188,26 @@ def main():
     gk_blocks = parse_source_into_blocks(gk_content) if gk_content else []
     print(f"📡 GK source: {len(gk_blocks)} blocks found")
 
-    # Safety check
     if not zee_blocks and not final_telugu_blocks and not gk_blocks:
         print("⚠️ All sources failed! Writing keep-alive placeholder.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Sources unavailable. Will retry next run.\n"
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # 5. Compile final text
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
-    # 5a. Add Zee channels first (Top 2)
     for block in zee_blocks:
         for line in block:
             final_text += line + "\n"
             
-    # 5b. Add ordered Telugu channels next
     for block in final_telugu_blocks:
         for line in block:
             final_text += line + "\n"
             
-    # 5c. Add GK channels exactly as they are at the end
     for block in gk_blocks:
         for line in block:
             final_text += line + "\n"
 
-    # 🔥 AES ENCRYPTION 🔥
     write_encrypted(final_text)
     print(f"✅ Successfully generated and encrypted {OUTPUT_FILE}")
 
