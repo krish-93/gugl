@@ -126,7 +126,7 @@ def main():
     print(f"🕐 Run time: {current_time}")
 
     temp_order = parse_temp_order(TEMP_M3U_FILE)
-    print(f"📋 Found {len(temp_order)} channels in temp.m3u for ordering")
+    print(f"📋 Found {len(temp_order)} channels in template.m3u for ordering")
 
     zee5_content = fetch_url(ZEE5_URL)
     zee_blocks = []
