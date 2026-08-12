@@ -1,176 +1,320 @@
-#EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz,https://raw.githubusercontent.com/mitthu786/tata-sky-playlist/main/epg.xml.gz"
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz" billed-msg="💎 PRO | Dev: 3/5 | 11-Aug-2026, 3:47:49 pm | 86 Days Left"
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c94a85da7e44563f8f3a687b5bef641c:445450834250887830adbde7c75caa2b
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1112" tvg-name="Star Maa HD" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/STAR%20Maa%20HD.png" tvg-category="Entertainment",Star Maa HD
+https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1112
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Maa_HD_BTS/WDVLive/*~hmac=073ddb5ee7955ce66a20878fc5b02178555cc4a3b8e46914f62dcd85a35f648c"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1112" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_HD.png" group-title="TELUGU TV" tvg-name="Star Maa HD",Star Maa HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_HD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=880dc94460af4197bbbf43a176fb3a95:0beb7012ffd133360889d5d56e20de4d
+#EXTINF:-1 tvg-id="194392" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20TV%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini TV HD
+https://livestream14.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a78f7295d78453c69f9849d40095be2d:a9d4d809e74edc7625c4fe7ffc9e4647
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="760" tvg-name="Star Maa Movies HD" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Maa%20Movies%20HD.png" tvg-category="Movies",Star Maa Movies HD
+https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_Movies_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1354
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ZeeTeluguHD_BTS/WDVLive/*~hmac=b8050c1d6beb907eaf7e4498b5e0331c350654bf2a319efef73972454b1a3df2"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1354" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTeluguHD.png" group-title="TELUGU TV" tvg-name="Zee Telugu HD",Zee Telugu HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeTeluguHD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://clearkey.joker-verse.workers.dev/license
+#EXTINF:-1 tvg-id="192537" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Movies%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Movies HD
+https://geminimovieshd.akamaized.net/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-HD" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV HD
+https://d1rznlx03muoan.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Plus" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Plus%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Plus HD
+https://d2pk5pedkyu2d0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_PLUS_H264_cloud_in/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Cinema" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Cinema%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Cinema HD
+https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Comedy.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Comedy
+https://jmp2.uk/stvp-IN4900003U3
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETVJosh.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Josh
+https://jmp2.uk/stvp-IN4900004LP
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETVMusic.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Music
+https://jmp2.uk/stvp-IN4900002RV
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Life" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Life.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Life
+https://d2cj1h11htct8o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_LIFE_H264_cloud_in/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Abhiruchi" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Abhiruchi.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Abhiruchi
+https://dg3721c3ez5m0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_ABHIRUCHI_H264_cloud-in/index.m3u8
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d66e0a9cac2853119c87b37d5dd7d25d:4449938d983c27cc7e154ba51260aa24
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1129" tvg-name="Star Maa Music" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Maa%20Music.png" tvg-category="Music",Star Maa Music
+https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_Music_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=897
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081844~exp=1783103444~acl=/*~hmac=705fedb847c73191fdade1a4e74d07de5650b9cf7bfc9078d0c280ddd567a2da"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="897" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_TV_HD.png" group-title="TELUGU TV" tvg-name="Gemini TV HD",Gemini TV HD
-https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_TV_HD_MOB/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=76230567f3c04513a7e5d1249ab65983:4ee6dc9a99d894dc41b0878d6ea22790
+#EXTINF:-1 tvg-id="194393" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Music%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Music HD
+https://livestream.sunnxt.com/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=59060fae4daf542b9b0dd6a361b62b95:4f4c689aaeb72b0f31e531215a139726
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1137" tvg-name="Maa Gold" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Gold.png" tvg-category="Movies",Maa Gold
+https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_Gold_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=6744a252854352acbfe40413a14fca0f:1de605f98df36a7417eff631e1a0966a
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1138" tvg-name="Star Maa" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Maa.png" tvg-category="Entertainment",Star Maa
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Maa_BTS/WDVLive/index.mpd?__hdnea__=st=1786440168~exp=1786461768~acl=/bpk-tv/Star_Maa_BTS/WDVLive/*~hmac=6e4b30c901469a49a51bc79b7d77065bc1b60cee32e784f85270fc5a2f4e7c47
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f4c022053f355b4b9dca0093463d7ba0:9f06388c48bfb94cff9797e25847d1d1
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1111" tvg-name="Star Maa Movies" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Maa%20Movies.png" tvg-category="Movies",Star Maa Movies
+https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Movies_BTS/WDVLive/index.mpd?__hdnea__=st=1786440150~exp=1786461750~acl=/bpk-tv/Maa_Movies_BTS/WDVLive/*~hmac=56e2e2f21fb66642c96908e321a5c856429e09c76e51fc317a89413498a20465
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=516d26778a21587484208637d89ff773:77599313595e70e5903151b0592ffa15
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1137-1182" tvg-name="Star Maa Gold" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Maa%20Gold.png" tvg-category="Movies",Star Maa Gold
+https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Gold_BTS/WDVLive/index.mpd?__hdnea__=st=1786440154~exp=1786461754~acl=/bpk-tv/Maa_Gold_BTS/WDVLive/*~hmac=6e60ecedccd4b2cfcb86790553bba65b438b2c004b7e18c0b9b0956037b10140
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1973
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_HD_BTS/WDVLive/*~hmac=04684f2e27519cdb639da783a3d57191df802e5792e725bb4bcfdd545cd95383"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1973" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_HD.png" group-title="TELUGU TV" tvg-name="ETV HD",ETV HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_HD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=1ce5cd75a6ad44a38a7d1b8dbaf9c330:657fc8e7d533456cb0644fe03458a4b2
+#EXTINF:-1 tvg-id="6" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Zee%20Telugu.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Zee Telugu
+https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetelgu/default/manifest.mpd|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"&Origin="https://www.zee5.com"&Referer="https://www.zee5.com/"&X-User-Agent="TiviMate/4.7.1"
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1363
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ZeeCinemaluHD_BTS/WDVLive/*~hmac=3aa72eb49c7eadfcbed022b035aa45804761594e5514621dc55fb6d16411ae11"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1363" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinemaluHD.png" group-title="TELUGU TV" tvg-name="Zee Cinemalu HD",Zee Cinemalu HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeCinemaluHD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=d27bc072600d431faa7d0c8441a5fb43:3b61f64edc79497d9da31d612a88f8ea
+#EXTINF:-1 tvg-id="7" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Zee%20Cinemalu.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Zee Cinemalu
+https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeecinemalu/default/manifest.mpd|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"&Origin="https://www.zee5.com"&Referer="https://www.zee5.com/"&X-User-Agent="TiviMate/4.7.1"
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=899
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081844~exp=1783103444~acl=/*~hmac=705fedb847c73191fdade1a4e74d07de5650b9cf7bfc9078d0c280ddd567a2da"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="899" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Movies_HD.png" group-title="TELUGU TV" tvg-name="Gemini Movies HD",Gemini Movies HD
-https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Movies_HD_MOB/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=96d5157791ea4817a66a419e285a137f:d6d0ad2a9a6cc56e18d7557c7c693a37
+#EXTINF:-1 tvg-id="194337" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Life.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Life
+https://livestream.sunnxt.com/a4b4f71a8b4344f3a280e906657a517a/GeminiLifeB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=760
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Maa_Movies_HD_BTS/WDVLive/*~hmac=1598bd4c8075ca34100775be514d48af08c446746ede0389c1cd2160adcec850"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="760" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Movies_HD.png" group-title="TELUGU TV" tvg-name="Star Maa Movies HD",Star Maa Movies HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Movies_HD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=93e686ceac134f30b0a7bc3ce5a76b26:2c37e97fa0646751e1f2b85bc4b9ff8a
+#EXTINF:-1 tvg-id="194394" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Comedy.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Comedy
+https://livestream.sunnxt.com/167c40e9521b470b87b4cf921fd0e146/GeminiComedyB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1665
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_Cinema_HD_BTS/WDVLive/*~hmac=8a50cf0cf4ffa6139b8ca3a04d1b52d4b1a4152e0175d3adf5533fa0902ed02f"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1665" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Cinema_HD.png" group-title="TELUGU TV" tvg-name="ETV Cinema HD",ETV Cinema HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Cinema_HD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=2ec6fa5b77ff4223a376c2b98032fbf8:afe96f602fd6abedcd9c2c8cdf799afd
+#EXTINF:-1 tvg-id="194396" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini TV
+https://livestream4.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd
+#https://mumbai-edge.smartplaytv.in/GeminiMoviesHD/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=2956
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_Plus_HD_BTS/WDVLive/*~hmac=0cafdf7e1bfd355db78f5cd2582101d2600ef768fc0d10df08f67265a4501e40"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="2956" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Plus_HD.png" group-title="TELUGU TV" tvg-name="ETV Plus HD",ETV Plus HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Plus_HD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2
+#https://geminimovieshd.akamaized.net/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+#https://livestream.sunnxt.com/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=684
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081844~exp=1783103444~acl=/*~hmac=705fedb847c73191fdade1a4e74d07de5650b9cf7bfc9078d0c280ddd567a2da"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="684" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Life.png" group-title="TELUGU TV" tvg-name="Gemini Life",Gemini Life
-https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Life_MOB/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2
+#EXTINF:-1 tvg-id="194384" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Movies.png",Gemini Movies
+https://livestream.sunnxt.com/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd
+#https://mumbai-edge.smartplaytv.in/GeminiMusicHD/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=729
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081844~exp=1783103444~acl=/*~hmac=705fedb847c73191fdade1a4e74d07de5650b9cf7bfc9078d0c280ddd567a2da"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="729" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Comedy.png" group-title="TELUGU TV" tvg-name="Gemini Comedy",Gemini Comedy
-https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Comedy_MOB/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=0faa2e9469fc45fdaf1728333351ec71:ffcf9dee6ede62bd8740dacfaa0c1e59
+#EXTINF:-1 tvg-id="194395" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Music.png",Gemini Music
+https://livestream.sunnxt.com/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=49e84b9edfd85379b90c81b7d2d3d2bf:19c82d3ff094fa06af95820a1572ecb5
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="3278" tvg-name="Star Sports 1 Telugu HD" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Sports%201%20Telugu%20HD.png" tvg-category="Sports",Star Sports 1 Telugu HD
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1786440173~exp=1786461773~acl=/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/*~hmac=c91dac8b103dd5772613b7059f81f6853f4939b5131ee4f31fcff71a1ad7a43e
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=200a6dd89c6b5a48b9991d8ab57fc7d2:1f62834669a97e92ea1f3263274853fc
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1651" tvg-name="Star Sports 1 Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Sports%201%20Telugu.png" tvg-category="Sports",Star Sports 1 Telugu
+https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_1_Telugu_BTS/WDVLive/index.mpd?__hdnea__=st=1786440172~exp=1786461772~acl=/bpk-tv/Star_Sports_1_Telugu_BTS/WDVLive/*~hmac=6ebc5d48100110414ba5b3e30c4c0d97fd1ba231f11d4b2e4a26a9e0487f897a
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c8a2fb190fc957c1b8333af9a7a39d31:be7497b59d4ce9e33d29bfd1d38bad1d
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="3274" tvg-name="Star Sports 2 Telugu HD" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Sports%202%20Telugu%20HD.png" tvg-category="Sports",Star Sports 2 Telugu HD
+https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1786440172~exp=1786461772~acl=/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/*~hmac=542cceccdda664d34869fbd1271f66e9fcfd47b3198f559bbbefa79a065e670d
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=6576a2664bc1563db2abd4fc192152b2:452e28454297a4193dbdf8f5cebc70b0
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="2852" tvg-name="Star Sports 2 Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://tvtelugu.pages.dev/logo/Star%20Sports%202%20Telugu.png" tvg-category="Sports",Star Sports 2 Telugu
+https://jiotvpllive.cdn.jio.com/bpk-tv/StarSports2Telugu_BTS/WDVLive/index.mpd?__hdnea__=st=1786440181~exp=1786461781~acl=/bpk-tv/StarSports2Telugu_BTS/WDVLive/*~hmac=722f5d147324bc73c4a092b4b54e21fb7cc436d3046d686ad83c2172154de5c6
+# Last Updated: 11th Aug 2026 | 12:43:50 PM
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/10%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",10 TV
+http://cache.internode.co.in:6081/10TV/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETVNews.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV News
+https://jmp2.uk/stvp-IN4900001AQ
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Telangana.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Telangana
+https://d37d7pfp7vjqhh.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_TS_H264_cloud_in/index.m3u8
+# backup: https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/f61ea6704a2d4040a2d8eb5c8855ebeb/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Andhra%20Pradesh.png",ETV Andhra Pradesh
+https://d1g35elx8qnif3.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_AP_H264_cloud_in/index.m3u8
+# backup: https://cdn-1.pishow.tv/live/391/master.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/10TV/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/6%20TV.png",6 TV
+https://mumbai-edge.smartplaytv.in/6TVTelugu/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/99%20TV%20Telugu.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",99 TV Telugu
+https://cdn-1.pishow.tv/live/1211/master.m3u8
+#EXTINF:-1 tvg-name="" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Aastha%20Telugu.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Aastha Telugu
+https://aasthaott.akamaized.net/110923/smil:aasthatelugu.smil/playlist.m3u8
+# backup: http://cache.internode.co.in:6081/AasthaTelugu/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/AasthaTelugu/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ABN%20Andhra%20Jyothy.png",ABN Andhra Jyothi
+https://cdn-1.pishow.tv/live/407/master.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/ABNAJ/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/BCT%20Keerthana.png",BCT Keerthana
+http://cache.internode.co.in:6081/BCTKeerthana/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/BCTKeerthana/index.m3u8
+#EXTINF:-1 tvg-name="" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Bhakti%20TV.png",Bhakti TV
+https://segment.yuppcdn.net/240122/bhakti/240122/bhakti_1800/chunks.m3u8
+# backup: https://segment.yuppcdn.net/240122/bhakti/playlist.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/BhakthiTv/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/BIG%20TV.png",BIG TV
+https://cdn-1.pishow.tv/live/1059/master.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/BIGTV/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/CVR%20Health.png",CVR Health
+http://cache.internode.co.in:6081/CVRHealth/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/CVRHealth/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/CVR%20News.png",CVR News
+http://cache.internode.co.in:6081/CVRNews/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/CVRNews/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/CVR%20Health.png",CVR OM
+http://cache.internode.co.in:6081/CVRHealth/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/CVROM/index.m3u8
+#EXTINF:-1 tvg-id="Sai TV" tvg-name="" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/dharshanam.png",Darshanam
+http://cache.internode.co.in:6081/darshanambhakthi/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/darshanambhakthi/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/DD%20Saptagiri.png",DD Saptagiri
+https://d2lk5u59tns74c.cloudfront.net/out/v1/26e915d6d12b4a06822c5e33c088ed56/index_3.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/DDSapthagiri/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/DD%20Yadagiri.png",DD Yadagiri
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/c89fa6d6f5864ac29670d6f91cb7e32a/index_3.m3u8
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=514b531ea70a590bbb14d4875d61fde9:f3e57f244cbfe59a2f20980a377752a8
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="3182" tvg-name="Animal Planet HD Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/AnimalPlanetHDTel.png" tvg-category="Infotainment",Animal Planet HD Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/AnimalPlanetHDTel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b565da9392a55ca3bd0a30bbc1f31579:babe82adb3bd5abcef04d21b7d982b07
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="3183" tvg-name="Animal Planet Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/AnimalPlanetTel.png" tvg-category="Infotainment",Animal Planet Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/AnimalPlanetTel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dfc915acb96f52e780f1d10e641a68ed:55f3cc761f9590761ee2b829be86cd45
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1080" tvg-name="Cartoon Network HD+ Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNHDTelugu.png" tvg-category="Kids",Cartoon Network HD+ Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/CNHDTelugu_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3e5ec63e26c1520380236941c3848f68:f944e7ee9260a9e6239170db4d6fa713
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="166" tvg-name="Cartoon Network Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNTelugu.png" tvg-category="Kids",Cartoon Network Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/CNTelugu_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#EXTINF:-1 tvg-id="8" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Chhaya%20Chitram.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Chhaya Chitram Telugu
+https://mumt04.tangotv.in/m18aqlK4CHHAYACHITRAMTELUGU/index.m3u8
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e27ae3a6764e5040b8ae942ef65b5543:651c362c87414d40a5400e5bd4cc3970
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="3446" tvg-name="Discovery HD Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DiscoveryHDTel.png" tvg-category="Infotainment",Discovery HD Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/DiscoveryHDTel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=898
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081844~exp=1783103444~acl=/*~hmac=705fedb847c73191fdade1a4e74d07de5650b9cf7bfc9078d0c280ddd567a2da"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="898" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Music_HD.png" group-title="TELUGU TV" tvg-name="Gemini Music HD",Gemini Music HD
-https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Music_HD_MOB/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=53d406746e3f5f8488ea3b3b9b7006e3:33fcad4800a1e67b1c53622a21bc6fb9
+#EXTINF:-1 tvg-id="12" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Discovery%20Kids.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Discovery Kids
+https://login.bheem.tv/bpk-tv/22646/output/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=57f1b2ef267e54e2a01f65d172f2cdca:cbfb990d2343da92cf4daa209963d0b6
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="576" tvg-name="Discovery Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Discovery_Channel_Telugu.png" tvg-category="Infotainment",Discovery Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/Discovery_Channel_Tel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0d0ccc0ee7e8560b93b3d3e639ea32b0:7beacbf5552dc159e5373fba32e2e5ea
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="577" tvg-name="History TV18 HD Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/History_18_Telugu.png" tvg-category="Infotainment",History TV18 HD Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/History_18_Telugu_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/HM%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",HM TV
+https://cdn-1.pishow.tv/live/280/master.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/HMTV/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/i%20News.png",i News
+https://livegeoroueu.akamaized.net/28072023/smil:inews.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+# backup: https://cdn-1.pishow.tv/live/411/master.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Mahaa%20Bhakthi.png",Mahaa Bhakthi
+https://d1msejlow1t3l4.cloudfront.net/fta/mahaabhakti/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+# backup: https://mumbai-edge.smartplaytv.in/MahaBhakthi/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Mahaa%20Max.png",Mahaa Max
+https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1129
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Maa_Music_BTS/WDVLive/*~hmac=136f3658ab3c44e1ce9b8c1594753912886d00ac51115d9d695140ade9370641"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1129" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Music.png" group-title="TELUGU TV" tvg-name="Star Maa Music",Star Maa Music
-https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Music_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=e16421cf7c374c57a8f7e91049f58cd9:b7e01aba2c307b1f05057e91a9d150d2
+#EXTINF:-1 tvg-id="194346" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Tamil" tvg-logo="https://tvtelugu.pages.dev/logo/Kushi%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Kushi TV
+https://livestream.sunnxt.com/4a736d41608849758a0aed36949ded30/KushiTVB_IN_index.mpd
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=YuppTV/7.18.1 (Linux;Android 16) ExoPlayerLib/2.19.1
+#EXTINF:-1 tvg-id="304" tvg-name="mahaa-bhakti" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/tzvxai.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Mahaa Bhakti
+https://d1msejlow1t3l4.cloudfront.net/fta/mahaabhakti/playlist.m3u8?hdnts=st%3D1786442743~exp%3D1786464343~acl%3D%21%2A%2Ffta%2Fmahaabhakti%2F%2A%21%2Fpayload%2Fyupptvott_5_-1_7c03c72952b44aa4_US_64.236.135.118_yuppfast_2_channel_304_-1%2F%2A~data%3Dyupptvott_5_-1_7c03c72952b44aa4_US_64.236.135.118_yuppfast_2_channel_304_-1~hmac%3D86aabc6b602d440e58fe1f1883f2672a32120acf5fdb87b40f1e374bf6eac98f
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/MAHAA%20NEWS.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Mahaa News
+http://cache.internode.co.in:6081/MahaNews/index.m3u8
+# backup: https://cdn-1.pishow.tv/live/401/master.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/MahaNews/index.m3u8
+#EXTINF:-1 tvg-logo="https://tvtelugu.pages.dev/logo/Mango%20TV.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮",Mango TV
+https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1138
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Star_Maa_BTS/WDVLive/*~hmac=f775c1cf661f1767b515233c0b6c7ef14a69975dc5fff2617d721f8f57a30e24"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1138" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Maa.png" group-title="TELUGU TV" tvg-name="Star Maa",Star Maa
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Maa_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://m3u.8088y.fun/jtv/Nick_Telugu.json
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ExoPlayerLib/824.0
+#EXTINF:-1 tvg-id="29" audio-track="3" tvg-logo="https://tvtelugu.pages.dev/logo/Nick.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Nick Telugu
+https://m3u.8088y.fun/jtv/Nick_Telugu.mpd?tk=testing
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/NTV%20Telugu.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",NTV Telugu
+https://medtaor.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/plives/110322/ntv/playlist.m3u8
+# backup: http://cache.internode.co.in:6081/NTVTelugu/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/NTVTelugu/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Raj%20Musix%20Telugu.png",Raj Musix Telugu
+https://cdn-1.pishow.tv/live/1213/master.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1111
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Maa_Movies_BTS/WDVLive/*~hmac=5a3ddd086b9c759f8a8e6a5d1b59e61f06439aa5ca6895154056e2c7b173a23f"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1111" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Movies.png" group-title="TELUGU TV" tvg-name="Star Maa Movies",Star Maa Movies
-https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Movies_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1137
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Maa_Gold_BTS/WDVLive/*~hmac=8d87055c2b21c564c3bd745f4fba24846b2f157a8a88f15aa12710fa63bb7e51"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="1137" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Gold.png" group-title="TELUGU TV" tvg-name="Star Maa Gold",Star Maa Gold
-https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Gold_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=638
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ZeeTelugu_BTS/WDVLive/*~hmac=bf33e46fc75cee86d4606af73ed9d64079e30dd08603a6bea87a2090b61b7576"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="638" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTelugu.png" group-title="TELUGU TV" tvg-name="Zee Telugu",Zee Telugu
-https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeTelugu_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=413
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ZeeCinemalu_BTS/WDVLive/*~hmac=1c9503ab4794e254410f20f7af8359f77a86ef1684c0d7796fd7478fe5d261ce"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="413" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinemalu.png" group-title="TELUGU TV" tvg-name="Zee Cinemalu",Zee Cinemalu
-https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeCinemalu_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=565
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_Abhiruchi_BTS/WDVLive/*~hmac=4bcb0623ef3e61b2b6fe3344477594b15dc7fc516925ccd91aaa9bea3d3a20f4"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="565" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Abhiruchi.png" group-title="TELUGU TV" tvg-name="ETV Abhiruchi",ETV Abhiruchi
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Abhiruchi_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=570
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_Life_BTS/WDVLive/*~hmac=3b215a9cf162e90266d5ab851677d1318e944e14e3a99cd5794173f07ea60880"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="570" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Life.png" group-title="TELUGU TV" tvg-name="ETV Life",ETV Life
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Life_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=614
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_Andhra_pradesh_BTS/WDVLive/*~hmac=4277db219550a898c83dc3f5492587ee369667f3366d31ea2f5f966a688c4dcf"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="614" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Andhra_pradesh.png" group-title="TELUGU TV" tvg-name="ETV Andhra pradesh",ETV Andhra pradesh
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Andhra_pradesh_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=630
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/ETV_Telangana_BTS/WDVLive/*~hmac=bc34f8f593fe53e6f731d658fb6b90e3697a86782fc8b69272e406a2dba017a9"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="630" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Telangana.png" group-title="TELUGU TV" tvg-name="ETV Telangana",ETV Telangana
-https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Telangana_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=558
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081844~exp=1783103444~acl=/*~hmac=705fedb847c73191fdade1a4e74d07de5650b9cf7bfc9078d0c280ddd567a2da"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="558" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Kushi_TV.png" group-title="TELUGU TV" tvg-name="Kushi TV",Kushi TV
-https://jiotvmblive.cdn.jio.com/bpk-tv/Kushi_TV_MOB/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=3278
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/*~hmac=a1cf3626ae9654fb5bc1e794cd28c4c62f77417dd18400336387ba369d3ac794"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="3278" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Sports_1_Telugu_HD.png" group-title="TELUGU TV" tvg-name="Star Sports 1 Telugu HD",Star Sports 1 Telugu HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/index.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=3274
-#EXTHTTP:{"cookie":"__hdnea__=st=1783081842~exp=1783103442~acl=/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/*~hmac=59568cfe7f8ef98d353213dd5a90d3ce1f34def22a722e704906c298b3639c62"}
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
-#EXTINF:-1 tvg-id="3274" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Sports2_Telugu_HD.png" group-title="TELUGU TV" tvg-name="Star Sports 2 Telugu HD",Star Sports 2 Telugu HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/index.mpd
+#KODIPROP:inputstream.adaptive.license_key=https://m3u.8088y.fun/jtv/Pogo_Telugu.json
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ExoPlayerLib/824.0
+#EXTINF:-1 tvg-id="27" audio-track="3" tvg-logo="https://tvtelugu.pages.dev/logo/Pogo.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Pogo Telugu
+https://m3u.8088y.fun/jtv/Pogo_Telugu.mpd?tk=testing
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e00e2372e66056d99642254b92bcf53e:70dc00e600e4a4c16afc0148ad2e8881
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1883" tvg-name="Pogo Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Pogo_Telugu.png" tvg-category="Kids",Pogo Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/Pogo_Tel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#EXTINF:-1 tvg-logo="https://tvtelugu.pages.dev/logo/RK%20Bhakthi%20TV.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",RK Bhakti TV
+https://mumbai-edge.smartplaytv.in/RKBhakthiTV/index.m3u8
+#EXTINF:-1 tvg-id="Sai TV" tvg-name="" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/SaiTV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sai TV
+http://decode.streamplay.in:1935/srisai/srisai/playlist.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Sakshi%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sakshi TV
+http://cache.internode.co.in:6081/Bomsak/index.m3u8
+# backup: https://cdn-1.pishow.tv/live/409/master.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Studio%20Yuva%20Alpha.png",Studio Yuva
+https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/chunks.m3u8
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a27b652e1c7d5dd2b752da161317168a:6c93d6b6fca86a51db17c05ddc800710
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="854" tvg-name="Sony BBC Earth HD Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyBBCEarthTel.png" tvg-category="Infotainment",Sony BBC Earth HD Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/SonyBBCEarthTel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4d39c423d72a5f1ca5df1de110c80422:572a9370c22c8b5d741352ebf8f68721
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="3398" tvg-name="Sony LIV Sports 4 Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyLIV_Sports_4_Telugu.png" tvg-category="Sports",Sony LIV Sports 4 Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/SonyLIV_Sports_4_Telugu_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=494a8a050ecc5a22adab6dc304ead1b4:9b3bbf2ccb71a876a2bbeb9cde00d7bf
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="1775" tvg-name="Sony Ten 4 Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images//Ten_4_Telugu.png" tvg-category="Sports",Sony Ten 4 Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/Ten_4_Telugu_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=af022a63d90353d9974d5cc15ce709e1:0db40153e9e2fc30e3949101c87d2ecb
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
+#EXTINF:-1 tvg-id="874" tvg-name="Sony Yay Telugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyYAYTel.png" tvg-category="Kids",Sony Yay Telugu
+https://jiotvmblive.cdn.jio.com/bpk-tv/SonyYAYTel_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
+#EXTINF:-1 tvg-id="19" tvg-logo="https://tvtelugu.pages.dev/logo/Superfine%20Films%20Telugu.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Superfine Films Telugu
+https://runthr.cdn.runn.tv/runntv/stream/suptel/playlist.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/SVBC%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",SVBC HD
+https://player.mslivestream.net/telugu/5d076e5c3d34cb8bb08e54a4bb7e223e.sdp/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/SVBC/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Swatantra%20TV.png",Swatantra TV
+http://cache.internode.co.in:6081/SwatantraTV/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/SwatantraTV/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/T%20News.png",T News
+https://cdn-1.pishow.tv/live/385/master.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/TNews/index.m3u8
+#EXTINF:-1 tvg-logo="https://tvtelugu.pages.dev/logo/Tolly%20TV.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮",Tolly TV
+https://sofast-lg.vgcdn.net/sofastplayout/2b9e9368-4803-4a2b-94c5-3c8c07e3a130_0_HLS/manifest.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/TV5%20News.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",TV5 News Telugu
+https://medtaor.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/plives/110322/tv5/playlist.m3u8
+# backup: http://cache.internode.co.in:6081/TV5Telugu/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/TV5Telugu/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/TV9%20Telugu.png",TV9 Telugu
+https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9telcmjhcs/liveabr/playlist.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/V6%20News.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",V6 News
+https://medtaor.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/plives/140622/v6news/playlist.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/V6News/index.m3u8
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Vanitha%20TV.png",Vanitha TV
+http://cache.internode.co.in:6081/VanithaTV/index.m3u8
+# backup: https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
+# backup: https://yuppnimrestreammum.akamaized.net/260723/smil:vanitha1.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+#EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/Zee%20Telugu%20News.png",Zee Telugu News
+https://d116gfrn8orazi.cloudfront.net/index_3.m3u8
+#EXTINF:-1 tvg-id="18" tvg-logo="https://tvtelugu.pages.dev/logo/WOW%20Kidz.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",WOW Kidz
+https://yuppparoriglin.akamaized.net//181224//smil:wowkidztelgu.smil//playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=YuppTV/7.18.1 (Linux;Android 16) ExoPlayerLib/2.19.1
+#EXTINF:-1 tvg-id="207" tvg-chno="423" tvg-name="yupptv-veda" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/yupptv-veda.png" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",YUPPTV VEDA
+https://yuppnimresmum.akamaized.net/28072023/smil:yupptvveda1.smil/playlist.m3u8?hdnts=st%3D1786442740~exp%3D1786464340~acl%3D%21%2A%2F28072023%2Fsmil%3Ayupptvveda1.smil%2F%2A%21%2Fpayload%2Fyupptvott_5_-1_7c03c72952b44aa4_US_64.236.135.118_yuppfast_2_channel_207_-1%2F%2A~data%3Dyupptvott_5_-1_7c03c72952b44aa4_US_64.236.135.118_yuppfast_2_channel_207_-1~hmac%3D9d662e40da44e38c5aa44b3889989821e845770069ba0107eead3ed7d2d938f6
