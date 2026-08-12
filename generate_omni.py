@@ -5,6 +5,7 @@ import ssl
 import sys
 import time
 import os
+import unicodedata
 from datetime import datetime, timezone
 import base64
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
@@ -35,7 +36,6 @@ def make_ssl_ctx():
 
 def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
-    # tvtelugu కోసం OTT Navigator User-Agent వాడుతున్నాము
     if "tvtelugu" in url:
         ua = "OTT Navigator IPTV/1.6.7.4 (Linux; Android 11)"
     else:
@@ -59,14 +59,18 @@ def is_url_line(line):
     s = line.strip()
     return bool(s) and not s.startswith("#") and (s.startswith("http") or s.startswith("rtmp"))
 
+def normalize_text(text):
+    # స్టైలిష్ అక్షరాలు లేదా వేరే ఫాంట్స్ ఉంటే దాన్ని నార్మల్ ఇంగ్లీష్ లా మారుస్తుంది
+    return unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore').decode('utf-8').lower()
+
 def get_channel_name(extinf_line):
     parts = extinf_line.split(",")
-    return parts[-1].strip().lower() if len(parts) > 1 else ""
+    return parts[-1].strip() if len(parts) > 1 else ""
 
 def get_group_title(extinf_line):
     m = re.search(r'group-title="([^"]+)"', extinf_line, re.IGNORECASE)
     if m:
-        return m.group(1).strip().lower()
+        return m.group(1).strip()
     return ""
 
 def set_group_title_telugu(extinf_line):
@@ -99,7 +103,7 @@ def parse_temp_order(file_path):
         if re.match(r'#\s*EXTINF', line.strip(), re.IGNORECASE):
             name = get_channel_name(line)
             if name:
-                names.append(name)
+                names.append(normalize_text(name))
     return names
 
 def decrypt_text(base64_text):
@@ -126,7 +130,7 @@ def main():
     print(f"🕐 Run time: {current_time}")
 
     temp_order = parse_temp_order(TEMP_M3U_FILE)
-    print(f"📋 Found {len(temp_order)} channels in template.m3u for ordering")
+    print(f"📋 Found {len(temp_order)} channels in temp.m3u for ordering")
 
     zee5_content = fetch_url(ZEE5_URL)
     zee_blocks = []
@@ -134,7 +138,7 @@ def main():
         all_zee_blocks = parse_source_into_blocks(zee5_content)
         for block in all_zee_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
-            name = get_channel_name(extinf)
+            name = normalize_text(get_channel_name(extinf))
             if "zee telugu hd" in name or "zee cinemalu hd" in name:
                 new_block = []
                 for line in block:
@@ -151,7 +155,8 @@ def main():
         all_tvtelugu_blocks = parse_source_into_blocks(tvtelugu_content)
         for block in all_tvtelugu_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
-            group = get_group_title(extinf)
+            group = normalize_text(get_group_title(extinf))
+            
             if "telugu" in group:
                 new_block = []
                 for line in block:
@@ -166,7 +171,7 @@ def main():
     telugu_dict = {}
     for block in telugu_blocks:
         extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
-        name = get_channel_name(extinf)
+        name = normalize_text(get_channel_name(extinf))
         telugu_dict[name] = block
 
     for name in temp_order:
