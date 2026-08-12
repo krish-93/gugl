@@ -12,8 +12,9 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-TEMPLATE_FILE = "template.m3u"
-FRESH_JIO_URL = "https://raw.githubusercontent.com/Sflex0719/m3u/refs/heads/main/ZioMobile.m3u"
+TEMP_M3U_FILE = "template.m3u"
+TVTELUGU_URL  = "https://tvtelugu.vercel.app/api/m3u?token=madhu8081"
+ZEE5_URL      = "https://cloudplay-app-json.pages.dev/pro-raw-files/zee5.m3u"
 GK_URL        = "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/lokulu.m3u"
 OUTPUT_FILE   = "helloworld.m3u"
 RETRY_COUNT   = 5
@@ -52,17 +53,29 @@ def is_url_line(line):
     s = line.strip()
     return bool(s) and not s.startswith("#") and (s.startswith("http") or s.startswith("rtmp"))
 
-def get_tvg_id(extinf_line):
-    m = re.search(r'tvg-id="([^"]+)"', extinf_line)
-    if m and m.group(1).strip():
-        return m.group(1).strip()
+def get_channel_name(extinf_line):
     parts = extinf_line.split(",")
-    return parts[-1].strip() if len(parts) > 1 else None
+    return parts[-1].strip().lower() if len(parts) > 1 else ""
+
+def get_group_title(extinf_line):
+    m = re.search(r'group-title="([^"]+)"', extinf_line, re.IGNORECASE)
+    if m:
+        return m.group(1).strip().lower()
+    return ""
+
+def set_group_title_telugu(extinf_line):
+    # Remove existing group-title completely
+    line = re.sub(r'group-title="[^"]*"', '', extinf_line).strip()
+    # Remove double spaces just in case
+    line = re.sub(r'\s+', ' ', line)
+    # Insert group-title="Telugu" right before the comma
+    line = re.sub(r',([^,]*)$', r' group-title="Telugu",\1', line)
+    return line
 
 def parse_source_into_blocks(content):
     lines = [l.rstrip() for l in content.splitlines()]
     start_idx = 1 if lines and re.match(r'#\s*EXTM3U', lines[0].strip(), re.IGNORECASE) else 0
-    channels = {}
+    blocks = []
     current_block = []
 
     for line in lines[start_idx:]:
@@ -71,25 +84,31 @@ def parse_source_into_blocks(content):
         current_block.append(stripped)
 
         if is_url_line(stripped):
-            tvg_id = next((get_tvg_id(bl) for bl in current_block if re.match(r'#\s*EXTINF', bl, re.IGNORECASE)), None)
-            if tvg_id:
-                channels[tvg_id] = current_block[:]
+            blocks.append(current_block[:])
             current_block = []
-    return channels
-
-def parse_template_ids(content):
-    return [get_tvg_id(line) for line in content.splitlines() if re.match(r'#\s*EXTINF', line.strip(), re.IGNORECASE)]
-
-def parse_gk_blocks(content):
-    blocks, current = [], []
-    for line in content.splitlines():
-        s = line.strip()
-        if not s or re.match(r'#\s*EXTM3U', s, re.IGNORECASE): continue
-        current.append(s)
-        if is_url_line(s):
-            if len(current) >= 2: blocks.append(current[:])
-            current = []
     return blocks
+
+def parse_temp_order(file_path):
+    if not os.path.exists(file_path):
+        return []
+    with open(file_path, "r", encoding="utf-8", errors="replace") as f:
+        content = f.read()
+    names = []
+    for line in content.splitlines():
+        if re.match(r'#\s*EXTINF', line.strip(), re.IGNORECASE):
+            name = get_channel_name(line)
+            if name:
+                names.append(name)
+    return names
+
+def decrypt_text(base64_text):
+    encrypted_data = base64.b64decode(base64_text.strip())
+    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
+    decryptor = cipher.decryptor()
+    padded_data = decryptor.update(encrypted_data) + decryptor.finalize()
+    unpadder = padding.PKCS7(128).unpadder()
+    data = unpadder.update(padded_data) + unpadder.finalize()
+    return data.decode('utf-8')
 
 def write_encrypted(text):
     padder = padding.PKCS7(128).padder()
@@ -101,37 +120,74 @@ def write_encrypted(text):
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
         f.write(base64_encrypted)
 
-def decrypt_text(base64_text):
-    encrypted_data = base64.b64decode(base64_text.strip())
-    cipher = Cipher(algorithms.AES(SECRET_KEY), modes.CBC(IV), backend=default_backend())
-    decryptor = cipher.decryptor()
-    padded_data = decryptor.update(encrypted_data) + decryptor.finalize()
-    unpadder = padding.PKCS7(128).unpadder()
-    data = unpadder.update(padded_data) + unpadder.finalize()
-    return data.decode('utf-8')
-
 def main():
     current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
-    if not os.path.exists(TEMPLATE_FILE):
-        # ✅ KEEP-ALIVE FIX: No template? Write placeholder & exit cleanly.
-        print("⚠️ Template file not found! Writing keep-alive placeholder.")
-        placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: template.m3u not found.\n"
-        write_encrypted(placeholder)
-        sys.exit(0)
+    # 1. Parse order from temp.m3u
+    temp_order = parse_temp_order(TEMP_M3U_FILE)
+    print(f"📋 Found {len(temp_order)} channels in temp.m3u for ordering")
 
-    with open(TEMPLATE_FILE, "r", encoding="utf-8", errors="replace") as f:
-        tmpl_ids = parse_template_ids(f.read())
-    print(f"📋 Template has {len(tmpl_ids)} channel IDs")
+    # 2. Fetch ZEE5 channels and extract Zee Telugu HD & Zee Cinemalu HD
+    zee5_content = fetch_url(ZEE5_URL)
+    zee_blocks = []
+    if zee5_content:
+        all_zee_blocks = parse_source_into_blocks(zee5_content)
+        for block in all_zee_blocks:
+            extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+            name = get_channel_name(extinf)
+            if "zee telugu hd" in name or "zee cinemalu hd" in name:
+                # Modify category to only "Telugu"
+                new_block = []
+                for line in block:
+                    if line.upper().startswith("#EXTINF"):
+                        new_block.append(set_group_title_telugu(line))
+                    else:
+                        new_block.append(line)
+                zee_blocks.append(new_block)
+        print(f"📡 ZEE5 source: extracted {len(zee_blocks)} specific Zee channels")
 
-    jio_content = fetch_url(FRESH_JIO_URL)
-    jio_channels = parse_source_into_blocks(jio_content) if jio_content else {}
-    print(f"📡 JioTV source: {len(jio_channels)} channels found")
+    # 3. Fetch tvtelugu channels and filter Telugu category
+    tvtelugu_content = fetch_url(TVTELUGU_URL)
+    telugu_blocks = []
+    if tvtelugu_content:
+        all_tvtelugu_blocks = parse_source_into_blocks(tvtelugu_content)
+        for block in all_tvtelugu_blocks:
+            extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+            group = get_group_title(extinf)
+            
+            # Filter if the original category has "telugu"
+            if "telugu" in group:
+                new_block = []
+                for line in block:
+                    if line.upper().startswith("#EXTINF"):
+                        new_block.append(set_group_title_telugu(line))
+                    else:
+                        new_block.append(line)
+                telugu_blocks.append(new_block)
+        print(f"📡 tvtelugu source: extracted {len(telugu_blocks)} Telugu channels")
 
-    matched = [jio_channels[cid] for cid in tmpl_ids if cid in jio_channels]
-    print(f"✅ Matched {len(matched)} channels from template")
+    # Order telugu_blocks according to temp.m3u
+    ordered_telugu_blocks = []
+    
+    # Create a dictionary for quick lookup by channel name
+    telugu_dict = {}
+    for block in telugu_blocks:
+        extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+        name = get_channel_name(extinf)
+        telugu_dict[name] = block
 
+    # Add channels in the exact order found in temp.m3u
+    for name in temp_order:
+        if name in telugu_dict:
+            ordered_telugu_blocks.append(telugu_dict.pop(name))
+    
+    # Whatever is left in the dictionary wasn't in temp.m3u, append them at the end
+    remaining_telugu_blocks = list(telugu_dict.values())
+    final_telugu_blocks = ordered_telugu_blocks + remaining_telugu_blocks
+    print(f"✅ Ordered {len(ordered_telugu_blocks)} tvtelugu channels matching temp.m3u (appended {len(remaining_telugu_blocks)} extras)")
+
+    # 4. Fetch GK channels (lokulu) - Don't change categories or order
     gk_content = fetch_url(GK_URL)
     if gk_content:
         try:
@@ -140,21 +196,31 @@ def main():
             gk_content = gk_content_dec
         except Exception as e:
             print(f"⚠️ Could not decrypt GK source (might be plaintext): {e}")
-    gk_blocks = parse_gk_blocks(gk_content) if gk_content else []
+    gk_blocks = parse_source_into_blocks(gk_content) if gk_content else []
     print(f"📡 GK source: {len(gk_blocks)} blocks found")
 
-    # ✅ KEEP-ALIVE FIX: Even if both sources fail, write a timestamped
-    # placeholder so repo stays active and workflow never gets disabled.
-    if not matched and not gk_blocks:
-        print("⚠️ Both sources failed! Writing keep-alive placeholder.")
+    # Safety check
+    if not zee_blocks and not final_telugu_blocks and not gk_blocks:
+        print("⚠️ All sources failed! Writing keep-alive placeholder.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Sources unavailable. Will retry next run.\n"
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # ✅ KEEP-ALIVE FIX: Timestamp in plaintext ensures encrypted output
-    # is ALWAYS different → git always has something to commit.
+    # 5. Compile final text
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
-    for block in matched + gk_blocks:
+    
+    # 5a. Add Zee channels first (Top 2)
+    for block in zee_blocks:
+        for line in block:
+            final_text += line + "\n"
+            
+    # 5b. Add ordered Telugu channels next
+    for block in final_telugu_blocks:
+        for line in block:
+            final_text += line + "\n"
+            
+    # 5c. Add GK channels exactly as they are at the end
+    for block in gk_blocks:
         for line in block:
             final_text += line + "\n"
 
