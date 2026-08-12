@@ -60,7 +60,6 @@ def is_url_line(line):
     return bool(s) and not s.startswith("#") and (s.startswith("http") or s.startswith("rtmp"))
 
 def normalize_text(text):
-    # స్టైలిష్ అక్షరాలు లేదా వేరే ఫాంట్స్ ఉంటే దాన్ని నార్మల్ ఇంగ్లీష్ లా మారుస్తుంది
     return unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore').decode('utf-8').lower()
 
 def get_channel_name(extinf_line):
@@ -157,7 +156,8 @@ def main():
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             group = normalize_text(get_group_title(extinf))
             
-            if "telugu" in group:
+            # ఇదివరకటి "in" ప్లేస్ లో "==" పెట్టాను (Exact Match కోసం)
+            if group == "telugu":
                 new_block = []
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
