@@ -40,4 +40,5 @@ jobs:
           # Timestamp in the encrypted file ensures content always changes,
           # keeping the repo active so GitHub never disables this workflow.
           git commit -m "chore: auto-refresh M3U at $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Nothing to commit"
+          git pull --rebase origin main
           git push || echo "Nothing to push"
