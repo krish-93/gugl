@@ -72,7 +72,7 @@ def parse_source_into_blocks(content):
     for idx in url_indices:
         url_line = lines[idx].strip()
         
-        # ఒకవేళ లింక్ ముందు # ఉంటే దాన్ని తీసేసి ఆక్టివ్ చేయాలి (Gemini Movies HD ఫిక్స్)
+        # ఒకవేళ లింక్ ముందు # ఉంటే దాన్ని తీసేసి ఆక్టివ్ చేయాలి
         if url_line.startswith("# backup: "):
             url_line = url_line.replace("# backup: ", "", 1)
         elif url_line.startswith("#http") or url_line.startswith("#rtmp"):
@@ -197,7 +197,9 @@ def main():
     for block in telugu_blocks:
         extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
         name = normalize_text(get_channel_name(extinf))
-        telugu_dict[name] = block
+        # 🟢 FIX: ఒకవేళ ఆల్రెడీ ఆ ఛానల్ ఉంటే ఓవర్‌రైట్ చేయొద్దు (Primary channel ని ఉంచాలి)
+        if name and name not in telugu_dict:
+            telugu_dict[name] = block
 
     for name in temp_order:
         if name in telugu_dict:
