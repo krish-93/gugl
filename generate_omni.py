@@ -36,6 +36,7 @@ def make_ssl_ctx():
 
 def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
+    # cloudplay-app-json.pages.dev కోసం sktechtv వాడుతున్నాం, ఇది 200 OK ఇస్తుంది
     if "tvtelugu" in url:
         ua = "OTT Navigator IPTV/1.6.7.4 (Linux; Android 11)"
     else:
@@ -72,11 +73,16 @@ def parse_source_into_blocks(content):
     for idx in url_indices:
         url_line = lines[idx].strip()
         
-        # ఒకవేళ లింక్ ముందు # ఉంటే దాన్ని తీసేసి ఆక్టివ్ చేయాలి
+        # కామెంట్ అయిన లింక్ ని ఆక్టివ్ చేయాలి
         if url_line.startswith("# backup: "):
             url_line = url_line.replace("# backup: ", "", 1)
         elif url_line.startswith("#http") or url_line.startswith("#rtmp"):
             url_line = url_line[1:]
+            
+        # 🟢 CRITICAL FIX FOR OMNITV: 
+        # ExoPlayer కి URL చివర |User-Agent= ఉంటే ప్లే అవ్వదు. దాన్ని కట్ చేసి ప్యూర్ URL మాత్రమే ఉంచాలి.
+        if "|" in url_line:
+            url_line = url_line.split("|")[0]
             
         block_lines = [url_line]
         extinf_found = False
@@ -157,23 +163,30 @@ def main():
     temp_order = parse_temp_order(TEMP_M3U_FILE)
     print(f"📋 Found {len(temp_order)} channels in temp.m3u for ordering")
 
+    # 1. ZEE5_URL నుండి Zee ఛానల్స్ తెచ్చుకుందాం
     zee5_content = fetch_url(ZEE5_URL)
     zee_blocks = []
     if zee5_content:
         all_zee_blocks = parse_source_into_blocks(zee5_content)
+        zee_dict = {}
         for block in all_zee_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             name = normalize_text(get_channel_name(extinf))
+            
+            # మీరు అడిగిన Zee Telugu HD, Zee Cinemalu HD మాత్రమే
             if "zee telugu hd" in name or "zee cinemalu hd" in name:
-                new_block = []
-                for line in block:
-                    if line.upper().startswith("#EXTINF"):
-                        new_block.append(set_group_title_telugu(line))
-                    else:
-                        new_block.append(line)
-                zee_blocks.append(new_block)
-        print(f"📡 ZEE5 source: extracted {len(zee_blocks)} specific Zee channels")
+                if name not in zee_dict:
+                    new_block = []
+                    for line in block:
+                        if line.upper().startswith("#EXTINF"):
+                            new_block.append(set_group_title_telugu(line))
+                        else:
+                            new_block.append(line)
+                    zee_dict[name] = new_block
+        zee_blocks = list(zee_dict.values())
+        print(f"📡 ZEE5 source: extracted {len(zee_blocks)} premium Zee channels")
 
+    # 2. TVTELUGU_URL నుండి మిగతా ఛానల్స్ తెచ్చుకుందాం
     tvtelugu_content = fetch_url(TVTELUGU_URL)
     telugu_blocks = []
     if tvtelugu_content:
@@ -181,7 +194,13 @@ def main():
         for block in all_tvtelugu_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             group = normalize_text(get_group_title(extinf))
+            name = normalize_text(get_channel_name(extinf))
             
+            # 🟢 FIX: tvtelugu లో ఉన్న పనికిరాని zee ఛానల్స్ ని వదిలేస్తున్నాం (ఎందుకంటే మనం ZEE5 నుండి బెస్ట్ వి తీసుకున్నాం)
+            if "zee telugu" in name or "zee cinemalu" in name:
+                continue
+                
+            # మీరు అడిగినట్లు కేవలం Telugu కేటగిరీ మాత్రమే తీసుకుంటున్నాం
             if group == "telugu":
                 new_block = []
                 for line in block:
@@ -192,23 +211,34 @@ def main():
                 telugu_blocks.append(new_block)
         print(f"📡 tvtelugu source: extracted {len(telugu_blocks)} Telugu channels")
 
+    # 3. రెండు లిస్ట్లని కలిపి, temp.m3u ఆర్డర్ ప్రకారం సెట్ చేద్దాం
     ordered_telugu_blocks = []
     telugu_dict = {}
+    
+    # ముందుగా ZEE5 ఛానల్స్ ని యాడ్ చేద్దాం
+    for block in zee_blocks:
+        extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+        name = normalize_text(get_channel_name(extinf))
+        if name and name not in telugu_dict:
+            telugu_dict[name] = block
+            
+    # తర్వాత tvtelugu ఛానల్స్ ని యాడ్ చేద్దాం
     for block in telugu_blocks:
         extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
         name = normalize_text(get_channel_name(extinf))
-        # 🟢 FIX: ఒకవేళ ఆల్రెడీ ఆ ఛానల్ ఉంటే ఓవర్‌రైట్ చేయొద్దు (Primary channel ని ఉంచాలి)
         if name and name not in telugu_dict:
             telugu_dict[name] = block
 
+    # temp.m3u ఆర్డర్ 
     for name in temp_order:
         if name in telugu_dict:
             ordered_telugu_blocks.append(telugu_dict.pop(name))
     
     remaining_telugu_blocks = list(telugu_dict.values())
     final_telugu_blocks = ordered_telugu_blocks + remaining_telugu_blocks
-    print(f"✅ Ordered {len(ordered_telugu_blocks)} tvtelugu channels matching temp.m3u (appended {len(remaining_telugu_blocks)} extras)")
+    print(f"✅ Ordered {len(ordered_telugu_blocks)} channels matching temp.m3u (appended {len(remaining_telugu_blocks)} extras)")
 
+    # 4. GK (లోకులు) సోర్స్
     gk_content = fetch_url(GK_URL)
     if gk_content:
         try:
@@ -216,22 +246,19 @@ def main():
             print("🔓 Successfully decrypted GK source.")
             gk_content = gk_content_dec
         except Exception as e:
-            print(f"⚠️ Could not decrypt GK source (might be plaintext): {e}")
+            print(f"⚠️ Could not decrypt GK source: {e}")
     gk_blocks = parse_source_into_blocks(gk_content) if gk_content else []
     print(f"📡 GK source: {len(gk_blocks)} blocks found")
 
-    if not zee_blocks and not final_telugu_blocks and not gk_blocks:
+    if not final_telugu_blocks and not gk_blocks:
         print("⚠️ All sources failed! Writing keep-alive placeholder.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Sources unavailable. Will retry next run.\n"
         write_encrypted(placeholder)
         sys.exit(0)
 
+    # 5. ఫైనల్ ఫైల్ రైటింగ్
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
-    for block in zee_blocks:
-        for line in block:
-            final_text += line + "\n"
-            
     for block in final_telugu_blocks:
         for line in block:
             final_text += line + "\n"
