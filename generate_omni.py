@@ -140,9 +140,24 @@ def main():
             name = normalize_text(get_channel_name(extinf))
             if "zee telugu hd" in name or "zee cinemalu hd" in name:
                 new_block = []
+                ua = ""
+                # ముందుగా ఈ బ్లాక్ లో User-Agent ఏమైనా ఉందేమో వెతకాలి 
+                for line in block:
+                    if line.upper().startswith("#EXTVLCOPT:HTTP-USER-AGENT="):
+                        ua = line.split("=", 1)[1].strip()
+                
+                # ఇప్పుడు కొత్త బ్లాక్ క్రియేట్ చేయాలి
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
                         new_block.append(set_group_title_telugu(line))
+                    elif line.upper().startswith("#EXTVLCOPT"):
+                        new_block.append(line)
+                    elif is_url_line(line):
+                        if ua and "|" not in line:
+                            # లింక్ చివరన User-Agent ని జత చేస్తున్నాం!
+                            new_block.append(f"{line}|User-Agent={ua}")
+                        else:
+                            new_block.append(line)
                     else:
                         new_block.append(line)
                 zee_blocks.append(new_block)
@@ -156,7 +171,6 @@ def main():
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             group = normalize_text(get_group_title(extinf))
             
-            # ఇదివరకటి "in" ప్లేస్ లో "==" పెట్టాను (Exact Match కోసం)
             if group == "telugu":
                 new_block = []
                 for line in block:
