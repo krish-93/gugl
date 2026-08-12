@@ -55,9 +55,49 @@ def fetch_url(url, retries=RETRY_COUNT):
                 time.sleep(RETRY_DELAY)
     return ""
 
-def is_url_line(line):
+def is_any_url(line):
     s = line.strip()
-    return bool(s) and not s.startswith("#") and (s.startswith("http") or s.startswith("rtmp"))
+    if s.startswith("http") or s.startswith("rtmp"): return True
+    if s.startswith("#http") or s.startswith("#rtmp"): return True
+    if s.startswith("# backup: http"): return True
+    return False
+
+def parse_source_into_blocks(content):
+    lines = [l.rstrip() for l in content.splitlines()]
+    blocks = []
+    
+    url_indices = [i for i, line in enumerate(lines) if is_any_url(line)]
+    
+    last_claimed_idx = -1
+    for idx in url_indices:
+        url_line = lines[idx].strip()
+        
+        # ఒకవేళ లింక్ ముందు # ఉంటే దాన్ని తీసేసి ఆక్టివ్ చేయాలి (Gemini Movies HD ఫిక్స్)
+        if url_line.startswith("# backup: "):
+            url_line = url_line.replace("# backup: ", "", 1)
+        elif url_line.startswith("#http") or url_line.startswith("#rtmp"):
+            url_line = url_line[1:]
+            
+        block_lines = [url_line]
+        extinf_found = False
+        
+        for j in range(idx - 1, last_claimed_idx, -1):
+            line = lines[j]
+            if not line.strip(): continue
+            if line.upper().startswith("#EXTM3U"): continue
+            
+            if line.upper().startswith("#EXTINF"):
+                if extinf_found:
+                    break
+                extinf_found = True
+            
+            block_lines.insert(0, line)
+            
+        if extinf_found:
+            blocks.append(block_lines)
+        last_claimed_idx = idx
+        
+    return blocks
 
 def normalize_text(text):
     return unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore').decode('utf-8').lower()
@@ -77,20 +117,6 @@ def set_group_title_telugu(extinf_line):
     line = re.sub(r'\s+', ' ', line)
     line = re.sub(r',([^,]*)$', r' group-title="Telugu",\1', line)
     return line
-
-def parse_source_into_blocks(content):
-    lines = [l.rstrip() for l in content.splitlines()]
-    start_idx = 1 if lines and re.match(r'#\s*EXTM3U', lines[0].strip(), re.IGNORECASE) else 0
-    blocks = []
-    current_block = []
-    for line in lines[start_idx:]:
-        stripped = line.strip()
-        if not stripped: continue
-        current_block.append(stripped)
-        if is_url_line(stripped):
-            blocks.append(current_block[:])
-            current_block = []
-    return blocks
 
 def parse_temp_order(file_path):
     if not os.path.exists(file_path):
@@ -140,24 +166,9 @@ def main():
             name = normalize_text(get_channel_name(extinf))
             if "zee telugu hd" in name or "zee cinemalu hd" in name:
                 new_block = []
-                ua = ""
-                # ముందుగా ఈ బ్లాక్ లో User-Agent ఏమైనా ఉందేమో వెతకాలి 
-                for line in block:
-                    if line.upper().startswith("#EXTVLCOPT:HTTP-USER-AGENT="):
-                        ua = line.split("=", 1)[1].strip()
-                
-                # ఇప్పుడు కొత్త బ్లాక్ క్రియేట్ చేయాలి
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
                         new_block.append(set_group_title_telugu(line))
-                    elif line.upper().startswith("#EXTVLCOPT"):
-                        new_block.append(line)
-                    elif is_url_line(line):
-                        if ua and "|" not in line:
-                            # లింక్ చివరన User-Agent ని జత చేస్తున్నాం!
-                            new_block.append(f"{line}|User-Agent={ua}")
-                        else:
-                            new_block.append(line)
                     else:
                         new_block.append(line)
                 zee_blocks.append(new_block)
