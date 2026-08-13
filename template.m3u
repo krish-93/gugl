@@ -24,11 +24,11 @@ https://d2pk5pedkyu2d0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Cinema" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Cinema%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Cinema HD
 https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Comedy.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Comedy
-https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8
+https://jmp2.uk/stvp-IN4900003U3
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETVJosh.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Josh
-https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8
+https://jmp2.uk/stvp-IN4900004LP
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETVMusic.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Music
-https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8
+https://jmp2.uk/stvp-IN4900002RV
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Life" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Life.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Life
 https://d2cj1h11htct8o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_LIFE_H264_cloud_in/index.m3u8
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-Abhiruchi" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Abhiruchi.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Abhiruchi
@@ -120,7 +120,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/StarSports2Telugu_BTS/WDVLive/index.mpd?_
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/10%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",10 TV
 http://cache.internode.co.in:6081/10TV/index.m3u8
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETVNews.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV News
-https://cc-3448kp65yhc5w.akamaized.net/WWBI/Amagi/ETV_News_IN/playlist.m3u8
+https://jmp2.uk/stvp-IN4900001AQ
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20Telangana.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV Telangana
 https://d37d7pfp7vjqhh.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_TS_H264_cloud_in/index.m3u8
 # backup: https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/f61ea6704a2d4040a2d8eb5c8855ebeb/index.m3u8
