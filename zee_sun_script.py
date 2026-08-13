@@ -14,7 +14,7 @@ from cryptography.hazmat.primitives import padding
 # ─── CONFIG ────────────────────────────────────────────────────────────
 PLAYLISTS = [
     {
-        "url": "http://140.245.107.220:5001/channels?url=https://gist.githubusercontent.com/ArcReactorCode/9ff3a4356291e6267ac76e30e4c44bc4/raw/sun.m3u",
+        "url": "https://raw.githubusercontent.com/alexandermail371/cricfytv/refs/heads/main/sunxt.m3u",
         "category": "SUNNXT"
     },
     {
