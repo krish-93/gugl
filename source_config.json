@@ -53,9 +53,7 @@
       "name": "S9-LG TV - SAMSUNG TV",
       "url": "https://omnitv.pages.dev/samlg.m3u",
       "priority": 9
-    },
-
-
+    }
   ],
   "epgUrl": "https://your-server.com/epg.xml.gz"
 }
