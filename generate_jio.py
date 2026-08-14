@@ -10,7 +10,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-FRESH_JIO_URL = "https://raw.githubusercontent.com/Sflex0719/m3u/refs/heads/main/ZioMobile.m3u"
+FRESH_JIO_URL = "https://m3u.cloudplay.qzz.io/prm-m3u/pllive-prm.m3u"
 OUTPUT_FILE   = "gio.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
@@ -51,8 +51,7 @@ def main():
     jio_content = fetch_url(FRESH_JIO_URL)
 
     if not jio_content:
-        # ✅ KEEP-ALIVE FIX: Even on fetch failure, write a timestamped placeholder
-        # so the repo always has a new commit keeping workflows alive.
+        # ✅ KEEP-ALIVE FIX
         print("⚠️ Fetch failed! Writing keep-alive placeholder to avoid stale repo.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Source unavailable. Will retry next run.\n"
         padder = padding.PKCS7(128).padder()
@@ -62,16 +61,34 @@ def main():
         encrypted = base64.b64encode(enc.update(padded) + enc.finalize()).decode('utf-8')
         with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
             f.write(encrypted)
-        sys.exit(0)  # Exit 0 so the workflow commits the placeholder!
+        sys.exit(0)
 
-    jio_lines = [
-        line.strip() for line in jio_content.splitlines()
-        if line.strip() and not line.strip().upper().startswith("#EXTM3U")
-    ]
-    print(f"📋 Total lines fetched: {len(jio_lines)}")
+    jio_lines = []
+    skip_current_channel = False
+    
+    # లైన్ బై లైన్ చెక్ చేస్తున్నాం
+    for line in jio_content.splitlines():
+        line_s = line.strip()
+        if not line_s or line_s.upper().startswith("#EXTM3U"):
+            continue
+            
+        # ఒకవేళ ఇది కొత్త ఛానల్ అయితే, అది మనం స్కిప్ చేయాల్సిన ఛానల్ కాదా అని చెక్ చేస్తాం
+        if line_s.upper().startswith("#EXTINF"):
+            if "CloudPlay" in line_s and "Jtv|General" in line_s:
+                skip_current_channel = True
+                print("🚫 Skipped channel: CloudPlay (Jtv|General)")
+            else:
+                skip_current_channel = False
+                
+        # స్కిప్ చేయాల్సిన ఛానల్ బ్లాక్ లో ఉంటే ఈ లైన్ ని వదిలేస్తాం (URL తో సహా)
+        if skip_current_channel:
+            continue
+            
+        jio_lines.append(line_s)
 
-    # ✅ KEEP-ALIVE FIX: Timestamp is embedded in plaintext so encrypted
-    # output is ALWAYS different → git always has something to commit.
+    print(f"📋 Total lines after filtering: {len(jio_lines)}")
+
+    # ఫైనల్ టెక్స్ట్ కి మన హెడర్ యాడ్ చేసి కలుపుతున్నాం
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     for line in jio_lines:
         final_text += line + "\n"
