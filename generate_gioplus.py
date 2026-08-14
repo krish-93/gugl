@@ -12,7 +12,7 @@ from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 # కొత్త JSON URL 
-WISPY_URL     = "https://m3u.cloudplay.qzz.io/mbjtv-pro.json"
+WISPY_URL     = "https://m3u.cloudplay.qzz.io/prm-m3u/mbjtv-pro.m3u"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
 RETRY_DELAY   = 10
