@@ -1,4 +1,3 @@
-import json
 import urllib.request
 import urllib.error
 import ssl
@@ -11,7 +10,6 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-# కొత్త JSON URL 
 WISPY_URL     = "https://m3u.cloudplay.qzz.io/prm-m3u/mbjtv-pro.m3u"
 OUTPUT_FILE   = "gioplus.m3u"
 RETRY_COUNT   = 5
@@ -44,7 +42,7 @@ def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
     req = urllib.request.Request(url, headers={
         "User-Agent": "OTT Navigator",
-        "Accept": "application/json"
+        "Accept": "*/*"
     })
     for attempt in range(1, retries + 1):
         try:
@@ -71,60 +69,14 @@ def main():
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # Parse JSON
-    channels = []
-    try:
-        channels = json.loads(content)
-        print(f"✅ Successfully parsed {len(channels)} channels from JSON!")
-    except Exception as e:
-        print(f"⚠️ JSON parsing error: {e}")
-        sys.exit(1)
-
-    final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
+    # 1. వస్తున్నది డైరెక్ట్ M3U ఫైల్ కాబట్టి దాన్ని JSON లోడ్ చేయకూడదు
+    # 2. ఫైల్ లో ఉన్న ఒరిజినల్ #EXTM3U ని తీసేసి మన కస్టమ్ OUTPUT_HEADER ని పెడుతున్నాం
     
-    valid_count = 0
-    for ch in channels:
-        name = ch.get('name', 'Unknown')
-        c_id = ch.get('id', '')
-        logo = ch.get('logo', '')
+    if content.startswith("#EXTM3U"):
+        content = content.replace("#EXTM3U", "", 1)
         
-        # పాత JSON లో 'category', కానీ కొత్త దాంట్లో 'group'
-        group = ch.get('group', ch.get('category', 'Uncategorized'))
-        
-        # కొత్త JSON లో లింక్ 'mpd_url' లో ఉంది
-        mpd_url = ch.get('mpd_url', ch.get('url', ''))
-        
-        # కొత్త JSON లో 'cookie' 'headers' అనే ఆబ్జెక్ట్ లోపల ఉంది
-        headers = ch.get('headers', {})
-        cookie = headers.get('cookie', ch.get('cookie', ''))
-        
-        # CloudPlay license URL & User Agent
-        license_url = ch.get('license_url', '')
-        user_agent = ch.get('user_agent', 'OTT Navigator')
-        
-        if not mpd_url or mpd_url == "null":
-            continue
-            
-        # OmniTV కి అర్థమయ్యేలా license_url ని డైరెక్ట్ గా EXTINF లోకి ఇస్తున్నాం
-        m3u_entry = f'#EXTINF:-1 tvg-id="{c_id}" tvg-logo="{logo}" group-title="{group}"'
-        
-        if license_url and license_url != "null":
-            # Cloudplay license servers అన్నీ "clearkey_get" వాడాలి
-            m3u_entry += f' license_type="clearkey_get" license_key="{license_url}"'
-            
-        m3u_entry += f',{name}\n'
-            
-        # URL తో పాటు User-Agent మరియు Cookie ని pipe (|) ద్వారా add చేస్తున్నాం
-        m3u_entry += f'{mpd_url}|User-Agent={user_agent}'
-        if cookie and cookie != "null":
-            m3u_entry += f'&Cookie={cookie}'
-        m3u_entry += '\n'
-        
-        final_text += m3u_entry
-        valid_count += 1
-        
-    print(f"📋 Total channels processed: {valid_count}")
-
+    final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n{content}"
+    
     # 🔥 AES ENCRYPTION 🔥
     write_encrypted(final_text)
     print(f"✅ Successfully generated and encrypted {OUTPUT_FILE}")
