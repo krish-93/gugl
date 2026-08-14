@@ -15,7 +15,6 @@ from cryptography.hazmat.primitives import padding
 # ─── CONFIG ────────────────────────────────────────────────────────────
 TEMP_M3U_FILE = "template.m3u"
 TVTELUGU_URL  = "https://tvtelugu.vercel.app/api/m3u?token=madhu8081"
-ZEE5_URL      = "https://cloudplay-app-json.pages.dev/pro-raw-files/zee5.m3u"
 GK_URL        = "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/lokulu.m3u"
 OUTPUT_FILE   = "helloworld.m3u"
 RETRY_COUNT   = 5
@@ -36,7 +35,7 @@ def make_ssl_ctx():
 
 def fetch_url(url, retries=RETRY_COUNT):
     ctx = make_ssl_ctx()
-    # ZEE5 requires 'sktechtv' user-agent
+    # tvtelugu requires specific user-agent
     if "tvtelugu" in url:
         ua = "OTT Navigator IPTV/1.6.7.4 (Linux; Android 11)"
     else:
@@ -73,14 +72,11 @@ def parse_source_into_blocks(content):
     for idx in url_indices:
         url_line = lines[idx].strip()
         
-        # కామెంట్ అయిన లింక్ ని ఆక్టివ్ చేయాలి
         if url_line.startswith("# backup: "):
             url_line = url_line.replace("# backup: ", "", 1)
         elif url_line.startswith("#http") or url_line.startswith("#rtmp"):
             url_line = url_line[1:]
             
-        # 🟢 CRITICAL FIX FOR OMNITV (ExoPlayer):
-        # లింక్ చివర |User-Agent= ఉంటే దాన్ని కట్ చేసి, దానికి బదులు #EXTVLCOPT ని యాడ్ చేయాలి
         ua_line = None
         if "|" in url_line:
             parts = url_line.split("|")
@@ -135,6 +131,7 @@ def set_group_title_telugu(extinf_line):
 
 def parse_temp_order(file_path):
     if not os.path.exists(file_path):
+        print(f"⚠️ Template file not found: {file_path}")
         return []
     with open(file_path, "r", encoding="utf-8", errors="replace") as f:
         content = f.read()
@@ -169,34 +166,11 @@ def main():
     current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
+    # 1. Read Order from template new.m3u
     temp_order = parse_temp_order(TEMP_M3U_FILE)
-    print(f"📋 Found {len(temp_order)} channels in temp.m3u for ordering")
+    print(f"📋 Found {len(temp_order)} channels in template new.m3u for ordering")
 
-    # 1. ZEE5_URL నుండి Zee ఛానల్స్
-    zee5_content = fetch_url(ZEE5_URL)
-    zee_blocks = []
-    if zee5_content:
-        all_zee_blocks = parse_source_into_blocks(zee5_content)
-        zee_dict = {}
-        for block in all_zee_blocks:
-            extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
-            name = normalize_text(get_channel_name(extinf))
-            
-            if "zee telugu hd" in name or "zee cinemalu hd" in name:
-                if name not in zee_dict:
-                    new_block = []
-                    for line in block:
-                        if line.upper().startswith("#EXTINF"):
-                            new_block.append(set_group_title_telugu(line))
-                            # 🟢 ZEE ఛానల్స్ కి బ్రౌజర్ User-Agent ఉంటేనే ప్లే అవుతాయి! 
-                            new_block.append("#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36")
-                        else:
-                            new_block.append(line)
-                    zee_dict[name] = new_block
-        zee_blocks = list(zee_dict.values())
-        print(f"📡 ZEE5 source: extracted {len(zee_blocks)} premium Zee channels")
-
-    # 2. TVTELUGU_URL నుండి ఛానల్స్
+    # 2. Extract Channels from TVTELUGU_URL
     tvtelugu_content = fetch_url(TVTELUGU_URL)
     telugu_blocks = []
     if tvtelugu_content:
@@ -205,17 +179,13 @@ def main():
             block_str = "\n".join(block)
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             group = normalize_text(get_group_title(extinf))
-            name = normalize_text(get_channel_name(extinf))
             
-            # 🟢 ZEE ఛానల్స్ ని స్కిప్ చేస్తున్నాం (మనం పైన ZEE5 సోర్స్ వాడుతున్నాం కాబట్టి)
-            if "zee telugu" in name or "zee cinemalu" in name:
-                continue
-                
             # 🟢 Gemini Movies HD కి సంబంధించిన పాత పనికిరాని SD Key ఉంటే స్కిప్ చెయ్
             if "0c37231880034787bce9fd3607aa09ea" in block_str:
                 continue
 
-            if group == "telugu":
+            # (ZEE5 తీసేసాం కాబట్టి ఇక్కడ zee telugu ని స్కిప్ చేయడం లేదు. కావాలంటే స్కిప్ చేయొచ్చు)
+            if group == "telugu" or group == "":
                 new_block = []
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
@@ -225,7 +195,7 @@ def main():
                 telugu_blocks.append(new_block)
         print(f"📡 tvtelugu source: extracted {len(telugu_blocks)} Telugu channels")
 
-    # 3. temp.m3u ఆర్డర్ ప్రకారం సెట్ చెయ్
+    # 3. Order Channels according to template new.m3u
     ordered_telugu_blocks = []
     telugu_dict = {}
     
@@ -241,12 +211,10 @@ def main():
     
     remaining_telugu_blocks = list(telugu_dict.values())
     
-    # 🟢 Zee ఛానల్స్ అందరికంటే పైన (నంబర్ 1, 2) రావాలని అడిగారు కాబట్టి వాటిని ముందు యాడ్ చేస్తున్నాం!
-    final_telugu_blocks = zee_blocks + ordered_telugu_blocks + remaining_telugu_blocks
-    
-    print(f"✅ Final list: {len(zee_blocks)} Zee + {len(ordered_telugu_blocks)} Ordered + {len(remaining_telugu_blocks)} Remaining")
+    final_telugu_blocks = ordered_telugu_blocks + remaining_telugu_blocks
+    print(f"✅ Final Telugu list: {len(ordered_telugu_blocks)} Ordered + {len(remaining_telugu_blocks)} Remaining = {len(final_telugu_blocks)} Total")
 
-    # 4. GK (లోకులు) సోర్స్
+    # 4. Extract & Decrypt GK (లోకులు) సోర్స్
     gk_content = fetch_url(GK_URL)
     if gk_content:
         try:
@@ -264,7 +232,7 @@ def main():
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # 5. ఫైనల్ ఫైల్ రైటింగ్
+    # 5. Merge and Encrypt (ఫైనల్ ఫైల్ రైటింగ్)
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
     for block in final_telugu_blocks:
