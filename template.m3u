@@ -1,4 +1,10 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz" billed-msg="💎 PRO | Dev: 3/5 | 11-Aug-2026, 3:47:49 pm | 86 Days Left"
+#EXTVLCOPT:http-user-agent=com.graymatrix.did;Android TV;5.82.6(203230929);Android(10);Xiaomi(Redmi Note 8 Pro)
+#EXTINF:-1 tvg-id="0-9-zeetelugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://img.media.jio.com/tvpimages/69/97/304102_1768463514417_l_medium.jpg", Zee Telugu HD
+http://shoebinfo.qzz.io/zee5/zee5.php/0-9-zeetelugu.m3u8
+#EXTVLCOPT:http-user-agent=com.graymatrix.did;Android TV;5.82.6(203230929);Android(10);Xiaomi(Redmi Note 8 Pro)
+#EXTINF:-1 tvg-id="0-9-zeecinemalu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://img.media.jio.com/tvpimages/41/55/304099_1768467977325_l_medium.jpg", Zee Cinemalu HD
+http://shoebinfo.qzz.io/zee5/zee5.php/0-9-zeecinemalu.m3u8
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=c94a85da7e44563f8f3a687b5bef641c:445450834250887830adbde7c75caa2b
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 14) ExoPlayerLib/2.11.7
