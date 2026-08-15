@@ -14,6 +14,7 @@ from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 TEMP_M3U_FILE = "template.m3u"
+CLOUDPLAY_URL = "https://m3u.cloudplay.qzz.io/prm-m3u/pllive-prm.m3u"
 TVTELUGU_URL  = "https://tvtelugu.vercel.app/api/m3u?token=madhu8081"
 GK_URL        = "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/lokulu.m3u"
 OUTPUT_FILE   = "helloworld.m3u"
@@ -166,55 +167,67 @@ def main():
     current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"🕐 Run time: {current_time}")
 
-    # 1. Read Order from template new.m3u
+    # 1. Read Order from template
     temp_order = parse_temp_order(TEMP_M3U_FILE)
-    print(f"📋 Found {len(temp_order)} channels in template new.m3u for ordering")
+    print(f"📋 Found {len(temp_order)} channels in {TEMP_M3U_FILE} for ordering")
 
-    # 2. Extract Channels from TVTELUGU_URL
-    tvtelugu_content = fetch_url(TVTELUGU_URL)
-    telugu_blocks = []
-    if tvtelugu_content:
-        all_tvtelugu_blocks = parse_source_into_blocks(tvtelugu_content)
-        for block in all_tvtelugu_blocks:
-            block_str = "\n".join(block)
+    telugu_dict = {}
+
+    # 2. Extract Channels from CloudPlay (Primary Source)
+    cloudplay_content = fetch_url(CLOUDPLAY_URL)
+    if cloudplay_content:
+        cloudplay_blocks = parse_source_into_blocks(cloudplay_content)
+        for block in cloudplay_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+            name = normalize_text(get_channel_name(extinf))
             group = normalize_text(get_group_title(extinf))
             
-            # 🟢 Gemini Movies HD కి సంబంధించిన పాత పనికిరాని SD Key ఉంటే స్కిప్ చెయ్
-            if "0c37231880034787bce9fd3607aa09ea" in block_str:
-                continue
-
-            # (ZEE5 తీసేసాం కాబట్టి ఇక్కడ zee telugu ని స్కిప్ చేయడం లేదు. కావాలంటే స్కిప్ చేయొచ్చు)
-            if group == "telugu" or group == "":
+            # Keep if it's in our template OR if it's a Telugu channel
+            if name in temp_order or "telugu" in group:
                 new_block = []
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
                         new_block.append(set_group_title_telugu(line))
                     else:
                         new_block.append(line)
-                telugu_blocks.append(new_block)
-        print(f"📡 tvtelugu source: extracted {len(telugu_blocks)} Telugu channels")
+                telugu_dict[name] = new_block
+        print(f"📡 CloudPlay source: extracted {len(telugu_dict)} Telugu/Template channels")
 
-    # 3. Order Channels according to template new.m3u
+    # 3. Extract ETV Permanent Channels from TVTELUGU (Overrides CloudPlay)
+    tvtelugu_content = fetch_url(TVTELUGU_URL)
+    permanent_etv = ["etv comedy", "etv music", "etv josh", "etv news"]
+    etv_count = 0
+    if tvtelugu_content:
+        tvtelugu_blocks = parse_source_into_blocks(tvtelugu_content)
+        for block in tvtelugu_blocks:
+            extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+            name = normalize_text(get_channel_name(extinf))
+            
+            if any(p in name for p in permanent_etv):
+                new_block = []
+                for line in block:
+                    if line.upper().startswith("#EXTINF"):
+                        new_block.append(set_group_title_telugu(line))
+                    else:
+                        new_block.append(line)
+                telugu_dict[name] = new_block
+                etv_count += 1
+        print(f"📡 TVTelugu source: preserved {etv_count} permanent ETV channels")
+
+    # 4. Order Channels according to template
     ordered_telugu_blocks = []
-    telugu_dict = {}
     
-    for block in telugu_blocks:
-        extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
-        name = normalize_text(get_channel_name(extinf))
-        if name and name not in telugu_dict:
-            telugu_dict[name] = block
-
     for name in temp_order:
         if name in telugu_dict:
             ordered_telugu_blocks.append(telugu_dict.pop(name))
     
+    # Remaining channels that were in Telugu groups but not in template
     remaining_telugu_blocks = list(telugu_dict.values())
     
     final_telugu_blocks = ordered_telugu_blocks + remaining_telugu_blocks
     print(f"✅ Final Telugu list: {len(ordered_telugu_blocks)} Ordered + {len(remaining_telugu_blocks)} Remaining = {len(final_telugu_blocks)} Total")
 
-    # 4. Extract & Decrypt GK (లోకులు) సోర్స్
+    # 5. Extract & Decrypt GK (లోకులు) సోర్స్
     gk_content = fetch_url(GK_URL)
     if gk_content:
         try:
@@ -232,7 +245,7 @@ def main():
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # 5. Merge and Encrypt (ఫైనల్ ఫైల్ రైటింగ్)
+    # 6. Merge and Encrypt (ఫైనల్ ఫైల్ రైటింగ్)
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
     for block in final_telugu_blocks:
