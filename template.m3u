@@ -1,9 +1,9 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz" billed-msg="💎 PRO | Dev: 3/5 | 11-Aug-2026, 3:47:49 pm | 86 Days Left"
 #EXTVLCOPT:http-user-agent=com.graymatrix.did;Android TV;5.82.6(203230929);Android(10);Xiaomi(Redmi Note 8 Pro)
-#EXTINF:-1 tvg-id="0-9-zeetelugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://img.media.jio.com/tvpimages/69/97/304102_1768463514417_l_medium.jpg", Zee Telugu HD
+#EXTINF:-1 tvg-id="0-9-zeetelugu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://img.media.jio.com/tvpimages/69/97/304102_1768463514417_l_medium.jpg",Zee Telugu HD
 http://shoebinfo.qzz.io/zee5/zee5.php/0-9-zeetelugu.m3u8
 #EXTVLCOPT:http-user-agent=com.graymatrix.did;Android TV;5.82.6(203230929);Android(10);Xiaomi(Redmi Note 8 Pro)
-#EXTINF:-1 tvg-id="0-9-zeecinemalu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://img.media.jio.com/tvpimages/41/55/304099_1768467977325_l_medium.jpg", Zee Cinemalu HD
+#EXTINF:-1 tvg-id="0-9-zeecinemalu" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-logo="https://img.media.jio.com/tvpimages/41/55/304099_1768467977325_l_medium.jpg",Zee Cinemalu HD
 http://shoebinfo.qzz.io/zee5/zee5.php/0-9-zeecinemalu.m3u8
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=c94a85da7e44563f8f3a687b5bef641c:445450834250887830adbde7c75caa2b
@@ -12,7 +12,7 @@ http://shoebinfo.qzz.io/zee5/zee5.php/0-9-zeecinemalu.m3u8
 https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=880dc94460af4197bbbf43a176fb3a95:0beb7012ffd133360889d5d56e20de4d
-#EXTINF:-1 tvg-id="194392" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20TV%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini TV HD
+#EXTINF:-1 tvg-id="194392" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20TV%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sun Gemini HD
 https://livestream14.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=a78f7295d78453c69f9849d40095be2d:a9d4d809e74edc7625c4fe7ffc9e4647
@@ -21,7 +21,7 @@ https://livestream14.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_
 https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_Movies_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://clearkey.joker-verse.workers.dev/license
-#EXTINF:-1 tvg-id="192537" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Movies%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Movies HD
+#EXTINF:-1 tvg-id="192537" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Movies%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sun Gemini Movies HD
 https://geminimovieshd.akamaized.net/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
 #EXTINF:-1 group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-id="ETV-HD" tvg-logo="https://tvtelugu.pages.dev/logo/ETV%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",ETV HD
 https://d1rznlx03muoan.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
@@ -46,7 +46,7 @@ https://dg3721c3ez5m0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8
 https://jiotvmblive.cdn.jio.com/bpk-tv/Maa_Music_MOB/WDVLive/index.mpd?__hdnea__=st=1786427918~exp=1786449518~acl=/*~hmac=4233ad75b348dba7d4d2564e56c231e0118359004574e0b94ddfaf77417b6715
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=76230567f3c04513a7e5d1249ab65983:4ee6dc9a99d894dc41b0878d6ea22790
-#EXTINF:-1 tvg-id="194393" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Music%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Music HD
+#EXTINF:-1 tvg-id="194393" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Music%20HD.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sun Gemini Music HD
 https://livestream.sunnxt.com/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=59060fae4daf542b9b0dd6a361b62b95:4f4c689aaeb72b0f31e531215a139726
@@ -78,15 +78,15 @@ https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetelgu/default/manifest.mpd|User-
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeecinemalu/default/manifest.mpd|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"&Origin="https://www.zee5.com"&Referer="https://www.zee5.com/"&X-User-Agent="TiviMate/4.7.1"
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=96d5157791ea4817a66a419e285a137f:d6d0ad2a9a6cc56e18d7557c7c693a37
-#EXTINF:-1 tvg-id="194337" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Life.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Life
+#EXTINF:-1 tvg-id="194337" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Life.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sun Gemini Life
 https://livestream.sunnxt.com/a4b4f71a8b4344f3a280e906657a517a/GeminiLifeB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=93e686ceac134f30b0a7bc3ce5a76b26:2c37e97fa0646751e1f2b85bc4b9ff8a
-#EXTINF:-1 tvg-id="194394" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Comedy.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini Comedy
+#EXTINF:-1 tvg-id="194394" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Comedy.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sun Gemini Comedy
 https://livestream.sunnxt.com/167c40e9521b470b87b4cf921fd0e146/GeminiComedyB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2ec6fa5b77ff4223a376c2b98032fbf8:afe96f602fd6abedcd9c2c8cdf799afd
-#EXTINF:-1 tvg-id="194396" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Gemini TV
+#EXTINF:-1 tvg-id="194396" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20TV.png" group-logo="https://tvtelugu.pages.dev/logo/TV%20Telugu.png",Sun Gemini
 https://livestream4.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd
 #https://mumbai-edge.smartplaytv.in/GeminiMoviesHD/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -95,12 +95,12 @@ https://livestream4.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_ind
 #https://livestream.sunnxt.com/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2
-#EXTINF:-1 tvg-id="194384" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Movies.png",Gemini Movies
+#EXTINF:-1 tvg-id="194384" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Movies.png",Sun Gemini Movies
 https://livestream.sunnxt.com/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd
 #https://mumbai-edge.smartplaytv.in/GeminiMusicHD/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0faa2e9469fc45fdaf1728333351ec71:ffcf9dee6ede62bd8740dacfaa0c1e59
-#EXTINF:-1 tvg-id="194395" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Music.png",Gemini Music
+#EXTINF:-1 tvg-id="194395" group-title="𝐓𝐞𝐥𝐮𝐠𝐮" tvg-language="Telugu" tvg-logo="https://tvtelugu.pages.dev/logo/Gemini%20Music.png",Sun Gemini Music
 https://livestream.sunnxt.com/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=49e84b9edfd85379b90c81b7d2d3d2bf:19c82d3ff094fa06af95820a1572ecb5
