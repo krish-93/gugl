@@ -14,7 +14,7 @@ from cryptography.hazmat.primitives import padding
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 TEMP_M3U_FILE = "template.m3u"
-CLOUDPLAY_URL = "https://m3u.cloudplay.qzz.io/prm-m3u/pllive-prm.m3u"
+CLOUDPLAY_URL = "https://raw.githubusercontent.com/Sflex0719/m3u/main/Zio.m3u"
 TVTELUGU_URL  = "https://tvtelugu.vercel.app/api/m3u?token=madhu8081"
 GK_URL        = "https://raw.githubusercontent.com/krish-93/gugl/refs/heads/main/lokulu.m3u"
 OUTPUT_FILE   = "helloworld.m3u"
@@ -82,10 +82,17 @@ def parse_source_into_blocks(content):
         if "|" in url_line:
             parts = url_line.split("|")
             url_line = parts[0]
+            other_params = []
+            
             for param in parts[1:]:
                 if param.startswith("User-Agent="):
                     ua = param.split("=", 1)[1]
                     ua_line = f"#EXTVLCOPT:http-user-agent={ua}"
+                else:
+                    other_params.append(param)
+                    
+            if other_params:
+                url_line = url_line + "|" + "|".join(other_params)
             
         block_lines = [url_line]
         if ua_line:
