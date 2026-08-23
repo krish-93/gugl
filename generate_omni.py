@@ -25,7 +25,8 @@ RETRY_DELAY   = 10
 SECRET_KEY = b"OmniTVSecureSecretKey_2026_12345"
 IV         = b"OmniTV_IV_16_Bys"
 
-OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://egp.ayush848694.workers.dev/"'
+# Mee kotha EPG urls tho patu patha EPG kuda kalipi add chesanu 
+OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://egp.ayush848694.workers.dev/" x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
 def make_ssl_ctx():
@@ -178,63 +179,68 @@ def main():
     temp_order = parse_temp_order(TEMP_M3U_FILE)
     print(f"📋 Found {len(temp_order)} channels in {TEMP_M3U_FILE} for ordering")
 
-    telugu_dict = {}
+    final_blocks_dict = {}
 
-    # 2. Extract Channels from CloudPlay (Primary Source)
+    # 2. Extract ONLY Template Channels from CloudPlay (Primary Source)
     cloudplay_content = fetch_url(CLOUDPLAY_URL)
     if cloudplay_content:
         cloudplay_blocks = parse_source_into_blocks(cloudplay_content)
         for block in cloudplay_blocks:
             extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
             name = normalize_text(get_channel_name(extinf))
-            group = normalize_text(get_group_title(extinf))
             
-            # Keep if it's in our template OR if it's a Telugu channel
-            if name in temp_order or "telugu" in group:
+            # Keep ONLY if it's in our template and we haven't added it yet
+            if name in temp_order and name not in final_blocks_dict:
                 new_block = []
                 for line in block:
                     if line.upper().startswith("#EXTINF"):
                         new_block.append(set_group_title_telugu(line))
                     else:
                         new_block.append(line)
-                telugu_dict[name] = new_block
-        print(f"📡 CloudPlay source: extracted {len(telugu_dict)} Telugu/Template channels")
+                final_blocks_dict[name] = new_block
+        print(f"📡 CloudPlay source: extracted {len(final_blocks_dict)} channels from template")
 
-    # 3. Extract ETV Permanent Channels from TVTELUGU (Overrides CloudPlay)
-    tvtelugu_content = fetch_url(TVTELUGU_URL)
-    permanent_etv = ["etv comedy", "etv music", "etv josh", "etv news"]
-    etv_count = 0
-    if tvtelugu_content:
-        tvtelugu_blocks = parse_source_into_blocks(tvtelugu_content)
-        for block in tvtelugu_blocks:
-            extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
-            name = normalize_text(get_channel_name(extinf))
+    # 3. Find out which template channels are STILL MISSING
+    missing_channels = [name for name in temp_order if name not in final_blocks_dict]
+    if missing_channels:
+        print(f"⚠️ Missing {len(missing_channels)} channels after CloudPlay. Will search in TVTelugu.")
+
+        # 4. Extract MISSING channels from TVTELUGU
+        tvtelugu_content = fetch_url(TVTELUGU_URL)
+        if tvtelugu_content:
+            tvtelugu_blocks = parse_source_into_blocks(tvtelugu_content)
+            for block in tvtelugu_blocks:
+                extinf = next((l for l in block if l.upper().startswith("#EXTINF")), "")
+                name = normalize_text(get_channel_name(extinf))
+                
+                # Add only if it is one of the missing channels
+                if name in missing_channels and name not in final_blocks_dict:
+                    new_block = []
+                    for line in block:
+                        if line.upper().startswith("#EXTINF"):
+                            new_block.append(set_group_title_telugu(line))
+                        else:
+                            new_block.append(line)
+                    final_blocks_dict[name] = new_block
             
-            if any(p in name for p in permanent_etv):
-                new_block = []
-                for line in block:
-                    if line.upper().startswith("#EXTINF"):
-                        new_block.append(set_group_title_telugu(line))
-                    else:
-                        new_block.append(line)
-                telugu_dict[name] = new_block
-                etv_count += 1
-        print(f"📡 TVTelugu source: preserved {etv_count} permanent ETV channels")
+            # Check if any are STILL missing after both sources
+            still_missing = [name for name in temp_order if name not in final_blocks_dict]
+            filled_count = len(missing_channels) - len(still_missing)
+            print(f"📡 TVTelugu source: filled {filled_count} missing channels.")
+            if still_missing:
+                print(f"⚠️ Still missing {len(still_missing)} channels completely: {still_missing}")
+    else:
+        print("✅ All template channels were found in CloudPlay!")
 
-    # 4. Order Channels according to template
+    # 5. Order Channels EXACTLY according to template
     ordered_telugu_blocks = []
-    
     for name in temp_order:
-        if name in telugu_dict:
-            ordered_telugu_blocks.append(telugu_dict.pop(name))
+        if name in final_blocks_dict:
+            ordered_telugu_blocks.append(final_blocks_dict[name])
     
-    # Remaining channels that were in Telugu groups but not in template
-    remaining_telugu_blocks = list(telugu_dict.values())
-    
-    final_telugu_blocks = ordered_telugu_blocks + remaining_telugu_blocks
-    print(f"✅ Final Telugu list: {len(ordered_telugu_blocks)} Ordered + {len(remaining_telugu_blocks)} Remaining = {len(final_telugu_blocks)} Total")
+    print(f"✅ Final Ordered list ready: {len(ordered_telugu_blocks)} Channels")
 
-    # 5. Extract & Decrypt GK (లోకులు) సోర్స్
+    # 6. Extract & Decrypt GK (లోకులు) సోర్స్
     gk_content = fetch_url(GK_URL)
     if gk_content:
         try:
@@ -246,16 +252,16 @@ def main():
     gk_blocks = parse_source_into_blocks(gk_content) if gk_content else []
     print(f"📡 GK source: {len(gk_blocks)} blocks found")
 
-    if not final_telugu_blocks and not gk_blocks:
+    if not ordered_telugu_blocks and not gk_blocks:
         print("⚠️ All sources failed! Writing keep-alive placeholder.")
         placeholder = f"{OUTPUT_HEADER}\n# Last Attempted: {current_time}\n# ERROR: Sources unavailable. Will retry next run.\n"
         write_encrypted(placeholder)
         sys.exit(0)
 
-    # 6. Merge and Encrypt (ఫైనల్ ఫైల్ రైటింగ్)
+    # 7. Merge and Encrypt (ఫైనల్ ఫైల్ రైటింగ్)
     final_text = f"{OUTPUT_HEADER}\n# Last Auto-Updated: {current_time}\n\n"
     
-    for block in final_telugu_blocks:
+    for block in ordered_telugu_blocks:
         for line in block:
             final_text += line + "\n"
             
